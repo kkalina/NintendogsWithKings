@@ -12,6 +12,9 @@ public class FPSControl : MonoBehaviour {
 	public Vector3 	camRot;
 	Rigidbody 		rigid;
 
+    public GameObject CameraMount;
+    public GameObject MineLauncherIronSight;
+
 	// Use this for initialization
 	void Start () {
 		camTrans = transform.Find ("Camera");
@@ -49,5 +52,17 @@ public class FPSControl : MonoBehaviour {
 		vel.y = rigid.velocity.y;
 
 		rigid.velocity = vel;
+
+        if((Mathf.Abs(vX) > 0) || (Mathf.Abs(vY) > 0))
+        {
+            CameraMount.GetComponent<Animator>().SetBool("walking", true);
+            MineLauncherIronSight.GetComponent<Animator>().SetBool("walking", true);
+        }
+        else
+        {
+
+            CameraMount.GetComponent<Animator>().SetBool("walking", false);
+            MineLauncherIronSight.GetComponent<Animator>().SetBool("walking", false);
+        }
 	}
 }
