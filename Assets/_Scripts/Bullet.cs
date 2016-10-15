@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bullet : MonoBehaviour {
+public class Bullet : MonoBehaviour {
     public float force = 100f;
     public float rad = 3f;
     private Rigidbody rb;
