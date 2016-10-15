@@ -9,10 +9,12 @@ public class mineLauncher : MonoBehaviour {
     public GameObject mineObj;
     public GameObject muzzle;
     public float launchVel = 10f;
+    public float ROF = 1;
+    private float lastFireTime = -1f;
 
 	void Update () {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&(Time.time > lastFireTime+ROF))
         {
             launchArm.GetComponent<Animator>().SetTrigger("fire");
             launcherObj.GetComponent<Animator>().SetTrigger("fire");
@@ -21,6 +23,7 @@ public class mineLauncher : MonoBehaviour {
             mineInst.transform.position = muzzle.transform.position;
             mineInst.transform.rotation = muzzle.transform.rotation;
             mineInst.GetComponent<Rigidbody>().velocity = muzzle.transform.forward*launchVel;
+            lastFireTime = Time.time;
         }
 	
 	}
