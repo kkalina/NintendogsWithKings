@@ -15,6 +15,8 @@ public class FPSControl : MonoBehaviour {
     public GameObject CameraMount;
     public GameObject MineLauncherIronSight;
 
+    public int damage = 0;
+
 	// Use this for initialization
 	void Start () {
 		camTrans = transform.Find ("Camera");

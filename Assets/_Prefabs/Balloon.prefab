@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011758147182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 0.05, y: 1, z: 0.05}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d3031fb443287d74ebf207550d5c0aab, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -157,7 +157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2861e355caed98c458cdd2604ff974a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 1000013464722130, guid: 52e3640f22f018c4a85b9cb1ee79531e, type: 2}
+  dropPrefab:
+  - {fileID: 1000012139932576, guid: 08433027b9c749544b8d3c1c32f45ec5, type: 2}
+  - {fileID: 1000010356091494, guid: db5da48889446694cb3f6bff26a6deaa, type: 2}
+  - {fileID: 1000013211539032, guid: fe4fe7b616c9ff64b8ec5b291ff68bf3, type: 2}
+  timer: 0
 --- !u!136 &136000013189499438
 CapsuleCollider:
   m_ObjectHideFlags: 1

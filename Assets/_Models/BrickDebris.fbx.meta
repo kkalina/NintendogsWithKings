@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 3b8f4b6a61053dd44af78ecd5bff145e
+timeCreated: 1476564150
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box cut 1 cut 1 cut 1
+    100002: Box cut 1 cut 2 cut 1
+    100004: Box cut 2 cut 1
+    100006: Camera
+    100008: Lamp
+    100010: shell 1 of Box cut 1 cut 1 cut 2
+    100012: shell 1 of Box cut 1 cut 2 cut 2
+    100014: shell 1 of Box cut 2 cut 2
+    100016: shell 2 of Box cut 1 cut 1 cut 2
+    100018: shell 2 of Box cut 1 cut 2 cut 2
+    100020: shell 2 of Box cut 2 cut 2
+    100022: shell 3 of Box cut 1 cut 1 cut 2
+    100024: shell 3 of Box cut 1 cut 2 cut 2
+    100026: shell 3 of Box cut 2 cut 2
+    100028: shell 4 of Box cut 1 cut 1 cut 2
+    100030: shell 4 of Box cut 1 cut 2 cut 2
+    100032: shell 4 of Box cut 2 cut 2
+    100034: shell 5 of Box cut 1 cut 1 cut 2
+    100036: shell 5 of Box cut 1 cut 2 cut 2
+    100038: shell 5 of Box cut 2 cut 2
+    100040: shell 6 of Box cut 1 cut 1 cut 2
+    100042: shell 6 of Box cut 1 cut 2 cut 2
+    100044: shell 7 of Box cut 1 cut 2 cut 2
+    100046: shell 8 of Box cut 1 cut 2 cut 2
+    100048: shell 9 of Box cut 1 cut 2 cut 2
+    100050: //RootNode
+    400000: Box cut 1 cut 1 cut 1
+    400002: Box cut 1 cut 2 cut 1
+    400004: Box cut 2 cut 1
+    400006: Camera
+    400008: Lamp
+    400010: shell 1 of Box cut 1 cut 1 cut 2
+    400012: shell 1 of Box cut 1 cut 2 cut 2
+    400014: shell 1 of Box cut 2 cut 2
+    400016: shell 2 of Box cut 1 cut 1 cut 2
+    400018: shell 2 of Box cut 1 cut 2 cut 2
+    400020: shell 2 of Box cut 2 cut 2
+    400022: shell 3 of Box cut 1 cut 1 cut 2
+    400024: shell 3 of Box cut 1 cut 2 cut 2
+    400026: shell 3 of Box cut 2 cut 2
+    400028: shell 4 of Box cut 1 cut 1 cut 2
+    400030: shell 4 of Box cut 1 cut 2 cut 2
+    400032: shell 4 of Box cut 2 cut 2
+    400034: shell 5 of Box cut 1 cut 1 cut 2
+    400036: shell 5 of Box cut 1 cut 2 cut 2
+    400038: shell 5 of Box cut 2 cut 2
+    400040: shell 6 of Box cut 1 cut 1 cut 2
+    400042: shell 6 of Box cut 1 cut 2 cut 2
+    400044: shell 7 of Box cut 1 cut 2 cut 2
+    400046: shell 8 of Box cut 1 cut 2 cut 2
+    400048: shell 9 of Box cut 1 cut 2 cut 2
+    400050: //RootNode
+    2300000: Box cut 1 cut 1 cut 1
+    2300002: Box cut 1 cut 2 cut 1
+    2300004: Box cut 2 cut 1
+    2300006: shell 1 of Box cut 1 cut 1 cut 2
+    2300008: shell 1 of Box cut 1 cut 2 cut 2
+    2300010: shell 1 of Box cut 2 cut 2
+    2300012: shell 2 of Box cut 1 cut 1 cut 2
+    2300014: shell 2 of Box cut 1 cut 2 cut 2
+    2300016: shell 2 of Box cut 2 cut 2
+    2300018: shell 3 of Box cut 1 cut 1 cut 2
+    2300020: shell 3 of Box cut 1 cut 2 cut 2
+    2300022: shell 3 of Box cut 2 cut 2
+    2300024: shell 4 of Box cut 1 cut 1 cut 2
+    2300026: shell 4 of Box cut 1 cut 2 cut 2
+    2300028: shell 4 of Box cut 2 cut 2
+    2300030: shell 5 of Box cut 1 cut 1 cut 2
+    2300032: shell 5 of Box cut 1 cut 2 cut 2
+    2300034: shell 5 of Box cut 2 cut 2
+    2300036: shell 6 of Box cut 1 cut 1 cut 2
+    2300038: shell 6 of Box cut 1 cut 2 cut 2
+    2300040: shell 7 of Box cut 1 cut 2 cut 2
+    2300042: shell 8 of Box cut 1 cut 2 cut 2
+    2300044: shell 9 of Box cut 1 cut 2 cut 2
+    3300000: Box cut 1 cut 1 cut 1
+    3300002: Box cut 1 cut 2 cut 1
+    3300004: Box cut 2 cut 1
+    3300006: shell 1 of Box cut 1 cut 1 cut 2
+    3300008: shell 1 of Box cut 1 cut 2 cut 2
+    3300010: shell 1 of Box cut 2 cut 2
+    3300012: shell 2 of Box cut 1 cut 1 cut 2
+    3300014: shell 2 of Box cut 1 cut 2 cut 2
+    3300016: shell 2 of Box cut 2 cut 2
+    3300018: shell 3 of Box cut 1 cut 1 cut 2
+    3300020: shell 3 of Box cut 1 cut 2 cut 2
+    3300022: shell 3 of Box cut 2 cut 2
+    3300024: shell 4 of Box cut 1 cut 1 cut 2
+    3300026: shell 4 of Box cut 1 cut 2 cut 2
+    3300028: shell 4 of Box cut 2 cut 2
+    3300030: shell 5 of Box cut 1 cut 1 cut 2
+    3300032: shell 5 of Box cut 1 cut 2 cut 2
+    3300034: shell 5 of Box cut 2 cut 2
+    3300036: shell 6 of Box cut 1 cut 1 cut 2
+    3300038: shell 6 of Box cut 1 cut 2 cut 2
+    3300040: shell 7 of Box cut 1 cut 2 cut 2
+    3300042: shell 8 of Box cut 1 cut 2 cut 2
+    3300044: shell 9 of Box cut 1 cut 2 cut 2
+    4300000: shell 9 of Box cut 1 cut 2 cut 2
+    4300002: shell 8 of Box cut 1 cut 2 cut 2
+    4300004: shell 7 of Box cut 1 cut 2 cut 2
+    4300006: shell 6 of Box cut 1 cut 2 cut 2
+    4300008: shell 6 of Box cut 1 cut 1 cut 2
+    4300010: shell 5 of Box cut 2 cut 2
+    4300012: shell 5 of Box cut 1 cut 2 cut 2
+    4300014: shell 5 of Box cut 1 cut 1 cut 2
+    4300016: shell 4 of Box cut 2 cut 2
+    4300018: shell 4 of Box cut 1 cut 2 cut 2
+    4300020: shell 4 of Box cut 1 cut 1 cut 2
+    4300022: shell 3 of Box cut 2 cut 2
+    4300024: shell 3 of Box cut 1 cut 2 cut 2
+    4300026: shell 3 of Box cut 1 cut 1 cut 2
+    4300028: shell 2 of Box cut 2 cut 2
+    4300030: shell 2 of Box cut 1 cut 2 cut 2
+    4300032: shell 2 of Box cut 1 cut 1 cut 2
+    4300034: shell 1 of Box cut 2 cut 2
+    4300036: shell 1 of Box cut 1 cut 2 cut 2
+    4300038: shell 1 of Box cut 1 cut 1 cut 2
+    4300040: Box cut 2 cut 1
+    4300042: Box cut 1 cut 2 cut 1
+    4300044: Box cut 1 cut 1 cut 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

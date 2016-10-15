@@ -9,8 +9,11 @@ public class LandmineKarl : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        GameObject explosionInst = Instantiate(explosion);
-        explosionInst.transform.position = parentObj.transform.position;
-        Destroy(parentObj);
+        if (coll.gameObject.tag != "Landmine")
+        {
+            GameObject explosionInst = Instantiate(explosion);
+            explosionInst.transform.position = parentObj.transform.position;
+            Destroy(parentObj);
+        }
     }
 }
