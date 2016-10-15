@@ -6,8 +6,8 @@ public class Shoot : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Instantiate(bullet, transform.position+ new Vector3(1, 0, 0) , transform.rotation);
+        if (Input.GetMouseButtonDown(0)) {
+            Instantiate(bullet, transform.position + transform.forward*1.5f , transform.rotation);
         }
 	}
 }

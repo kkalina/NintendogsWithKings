@@ -13,7 +13,7 @@ public class Ragdoller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButtonDown(1) && skin.enabled) {
             skin.enabled = false;
             Instantiate(ragdoll, transform.position, Quaternion.identity);
         }
