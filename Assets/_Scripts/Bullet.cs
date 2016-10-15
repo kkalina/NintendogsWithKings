@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
     public float force = 100f;
-    public float rad = 3f;
+    //public float rad = 3f;
     public int lifetime = 4;
     private Rigidbody rb;
 	// Use this for initialization
