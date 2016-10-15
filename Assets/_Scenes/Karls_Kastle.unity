@@ -9424,7 +9424,7 @@ GameObject:
   - 4: {fileID: 1041843539}
   - 114: {fileID: 1041843540}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9670,7 +9670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cadc5cb35bc5d42af5b58c9327402a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSpeed: 2
+  idleSpeed: 1
   speed: 0
   deceleration: 0.95
 --- !u!1 &1049058823
