@@ -489,7 +489,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0.4
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 20
+  explosionForce: 100
 --- !u!198 &198000010914269676
 ParticleSystem:
   m_ObjectHideFlags: 1

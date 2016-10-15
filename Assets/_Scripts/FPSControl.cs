@@ -12,6 +12,11 @@ public class FPSControl : MonoBehaviour {
 	public Vector3 	camRot;
 	Rigidbody 		rigid;
 
+    public GameObject CameraMount;
+    public GameObject MineLauncherIronSight;
+
+    public int damage = 0;
+
 	// Use this for initialization
 	void Start () {
 		camTrans = transform.Find ("Camera");
@@ -27,7 +32,7 @@ public class FPSControl : MonoBehaviour {
 		float mDeltaX = Input.GetAxis("Mouse X");
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
-		print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
+		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
 
 		camRot.x -= mDeltaY * vertMult;
 		camRot.x = Mathf.Clamp(camRot.x, vertMin, vertMax);
@@ -49,5 +54,17 @@ public class FPSControl : MonoBehaviour {
 		vel.y = rigid.velocity.y;
 
 		rigid.velocity = vel;
+
+        if((Mathf.Abs(vX) > 0) || (Mathf.Abs(vY) > 0))
+        {
+            CameraMount.GetComponent<Animator>().SetBool("walking", true);
+            MineLauncherIronSight.GetComponent<Animator>().SetBool("walking", true);
+        }
+        else
+        {
+
+            CameraMount.GetComponent<Animator>().SetBool("walking", false);
+            MineLauncherIronSight.GetComponent<Animator>().SetBool("walking", false);
+        }
 	}
 }
