@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class shoot : MonoBehaviour {
+public class Shoot : MonoBehaviour {
     public GameObject bullet;
 
 	// Update is called once per frame
