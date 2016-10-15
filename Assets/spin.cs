@@ -14,6 +14,6 @@ public class spin : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         angle += Time.deltaTime * speed;
-        this.transform.rotation = Quaternion.EulerAngles(0,angle,0);
+        this.transform.localRotation = Quaternion.EulerAngles(0,angle,0);
 	}
 }
