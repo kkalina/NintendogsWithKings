@@ -30,7 +30,7 @@ public class FPSControl : MonoBehaviour {
 		float mDeltaX = Input.GetAxis("Mouse X");
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
-		print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
+		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
 
 		camRot.x -= mDeltaY * vertMult;
 		camRot.x = Mathf.Clamp(camRot.x, vertMin, vertMax);

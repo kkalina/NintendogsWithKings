@@ -25,8 +25,8 @@ GameObject:
   - 96: {fileID: 96000011791923910}
   - 54: {fileID: 54000010689286908}
   - 114: {fileID: 114000014105996864}
-  m_Layer: 0
-  m_Name: Sphere
+  m_Layer: 9
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013200549456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8000002, y: 19.81, z: -0.4}
+  m_LocalPosition: {x: 6.8075967, y: -1.51, z: -19.881021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -95,7 +95,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!96 &96000011791923910
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +125,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.2
   m_StartWidth: 0.2
   m_EndWidth: 0.1
   m_Colors:
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 5000
   rad: 3
+  lifetime: 4
 --- !u!135 &135000012281788370
 SphereCollider:
   m_ObjectHideFlags: 1
