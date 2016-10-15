@@ -8,6 +8,7 @@ public class mineLauncher : MonoBehaviour {
     public GameObject launcherObj;
     public GameObject mineObj;
     public GameObject muzzle;
+    public float launchVel = 10f;
 
 	void Update () {
 
@@ -17,7 +18,9 @@ public class mineLauncher : MonoBehaviour {
             launcherObj.GetComponent<Animator>().SetTrigger("fire");
             tireObj.GetComponent<spin>().speed = 35;
             GameObject mineInst = Instantiate(mineObj);
-            mineObj.transform.position = muzzle.transform.position;
+            mineInst.transform.position = muzzle.transform.position;
+            mineInst.transform.rotation = muzzle.transform.rotation;
+            mineInst.GetComponent<Rigidbody>().velocity = muzzle.transform.forward*launchVel;
         }
 	
 	}
