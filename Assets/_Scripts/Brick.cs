@@ -30,6 +30,7 @@ public class Brick : MonoBehaviour {
             brickDebrisInst.transform.rotation = this.transform.rotation;*/
             //Destroy(this.gameObject);
             broken = true;
+            if(this.gameObject.GetComponent<Rigidbody>()!=null)
             this.gameObject.GetComponent<Rigidbody>().Sleep();
         }
 

@@ -41,6 +41,7 @@ public class KingNav : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.E)&&(Mathf.Sqrt(Mathf.Pow(player.position.x,2)+ Mathf.Pow(player.position.z, 2))<=activationDistance))
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             agent.SetDestination(player.position);
             goal = player.position;
             reached_goal = false;
