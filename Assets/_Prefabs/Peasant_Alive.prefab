@@ -1719,7 +1719,7 @@ MonoBehaviour:
   king: {fileID: 0}
   assassinExplosion: {fileID: 1000012695897024, guid: 071858cf11fa47f4ea0cba47edd10125,
     type: 2}
-  chanceToBecomeAssassinOneIn: 10000
+  chanceToBecomeAssassinOneIn: 50000
   peasantSpeed: 3.5
   assassinSpeed: 7
   max_walk_distance: 80
