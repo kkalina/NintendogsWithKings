@@ -6,7 +6,10 @@ public class Bullet : MonoBehaviour {
     //public float rad = 3f;
     public int lifetime = 4;
     private Rigidbody rb;
-	// Use this for initialization
+    // Use this for initialization
+    public GameObject crater;
+    public GameObject ricochetObj;
+
 	void Start () {
         Destroy(this.gameObject, lifetime);
         rb = GetComponent<Rigidbody>();
@@ -20,7 +23,21 @@ public class Bullet : MonoBehaviour {
         {
             //other.rigidbody.AddRelativeForce(new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 
             //    Random.Range(-100f, 100f)), ForceMode.Impulse);
+            
+        }
+        if (other.gameObject.tag == "Wall")
+        {
+            ContactPoint contact = other.contacts[0];
+            Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            Vector3 pos = contact.point;
 
+            GameObject craterInst = Instantiate(crater);
+            craterInst.transform.rotation = rot;
+            pos += craterInst.transform.up * 0.1f;
+            craterInst.transform.position = pos;
+            craterInst.transform.SetParent(other.gameObject.transform);
+            Instantiate(ricochetObj);
+            //this.gameObject.GetComponent<AudioSource>().Play();
         }
     }
 	

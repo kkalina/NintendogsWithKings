@@ -413,7 +413,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011736207828}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 364b1cef02f03db458f4a27371175552, type: 3}
@@ -564,6 +564,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 500000
   lifetime: 4
+  crater: {fileID: 1000012501594684, guid: 861e320e073d2a74fb8bb90e39e9f51d, type: 2}
+  ricochetObj: {fileID: 1000013878910424, guid: 945ffa17aef4aff47ade2f8a1a278c64,
+    type: 2}
 --- !u!114 &114000011496567798
 MonoBehaviour:
   m_ObjectHideFlags: 1
