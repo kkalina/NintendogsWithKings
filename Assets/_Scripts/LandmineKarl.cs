@@ -53,10 +53,10 @@ public class LandmineKarl : MonoBehaviour
             //crater.transform.position = this.transform.position;
             //crater.transform.rotation = this.transform.rotation;
             float kingDist = Vector3.Distance(this.transform.position, king.transform.position);
-            Debug.Log("King Dist = " + kingDist);
-            if (kingDist < 50)
+            //Debug.Log("King Dist = " + kingDist);
+            if (kingDist < 15)
             {
-                king.gameObject.GetComponent<KingNav>().health -= (int)Mathf.Ceil((50 - kingDist)*3);
+                king.gameObject.GetComponent<KingNav>().health -= (int)Mathf.Ceil((15 - kingDist)*10);
             }
 
             Destroy(parentObj);

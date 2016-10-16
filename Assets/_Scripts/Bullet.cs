@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour {
     public GameObject peasantDead;
     public GameObject vaseDebris;
     public float peasantHitForce = 100f;
+    public float kingHitForce = 100f;
 
 
     void Start () {
@@ -65,6 +66,11 @@ public class Bullet : MonoBehaviour {
             vaseDebrisInst.transform.position = other.gameObject.transform.position;
             vaseDebrisInst.transform.rotation = other.gameObject.transform.rotation;
             Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "King")
+        {
+            other.gameObject.GetComponent<KingNav>().health -= 99;
+            other.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * kingHitForce);
         }
     }
 	

@@ -10,6 +10,7 @@ TagManager:
   - Peasant
   - Brick
   - Vase
+  - King
   layers:
   - Default
   - TransparentFX

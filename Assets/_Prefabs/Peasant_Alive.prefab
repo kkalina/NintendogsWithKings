@@ -1717,6 +1717,8 @@ MonoBehaviour:
   assassinMat: {fileID: 2100000, guid: b1fa3460362a73249b0ad244720ed8b3, type: 2}
   characterMesh: {fileID: 1000014164899484}
   king: {fileID: 0}
+  assassinExplosion: {fileID: 1000012695897024, guid: 071858cf11fa47f4ea0cba47edd10125,
+    type: 2}
   chanceToBecomeAssassinOneIn: 10000
   peasantSpeed: 3.5
   assassinSpeed: 7

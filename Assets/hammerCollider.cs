@@ -5,6 +5,7 @@ public class hammerCollider : MonoBehaviour
 {
     public float peasantHitForce = 100f;
     public float brickHitForce = 100f;
+    public float kingHitForce = 100f;
     public GameObject peasantDead;
     public float awakeTime = 0f;
     public float duration = 0.2f;
@@ -44,6 +45,12 @@ public class hammerCollider : MonoBehaviour
         }else if(other.gameObject.tag == "Brick") {
             Instantiate(sound);
             other.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * brickHitForce);
+        }
+        else if (other.gameObject.tag == "King")
+        {
+            Instantiate(sound);
+            other.gameObject.GetComponent<KingNav>().health-=50;
+            other.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * kingHitForce);
         }/*else
         {
             Instantiate(sound);  

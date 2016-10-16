@@ -12,7 +12,6 @@ public class Shoot : MonoBehaviour {
     void Start() {
         // fire_point = transform.FindChild("Fire_Point").transform;
 
-        shooting = false;
     }
 
 	// Update is called once per frame

@@ -8,6 +8,7 @@ public class peasantController : MonoBehaviour {
     public Material assassinMat;
     public GameObject characterMesh;
     public GameObject king;
+    public GameObject assassinExplosion;
 
     public float chanceToBecomeAssassinOneIn = 100;
 
@@ -28,7 +29,8 @@ public class peasantController : MonoBehaviour {
         {
             navi.speed = assassinSpeed;
             characterMesh.GetComponent<Renderer>().material = assassinMat;
-            goal = new Vector3(Random.Range(king.transform.position.x - assassinOffset, king.transform.position.x + assassinOffset), king.transform.position.y, Random.Range(king.transform.position.z - assassinOffset, king.transform.position.z + assassinOffset));
+            //goal = new Vector3(Random.Range(king.transform.position.x - assassinOffset, king.transform.position.x + assassinOffset), king.transform.position.y, Random.Range(king.transform.position.z - assassinOffset, king.transform.position.z + assassinOffset));
+            goal = king.transform.position;
             navi.SetDestination(goal);
             timeOfLastDirectionChange = Time.time;
         }
@@ -52,9 +54,19 @@ public class peasantController : MonoBehaviour {
         if (Assassin) {
             if (Time.time > (timeOfLastDirectionChange + directionChangeInterval))
             {
-                goal = new Vector3(Random.Range(king.transform.position.x - assassinOffset, king.transform.position.x + assassinOffset), king.transform.position.y, Random.Range(king.transform.position.z - assassinOffset, king.transform.position.z + assassinOffset));
+                //goal = new Vector3(Random.Range(king.transform.position.x - assassinOffset, king.transform.position.x + assassinOffset), king.transform.position.y, Random.Range(king.transform.position.z - assassinOffset, king.transform.position.z + assassinOffset));
+                goal = king.transform.position;
+
                 navi.SetDestination(goal);
                 timeOfLastDirectionChange = Time.time;
+            }
+            float kingDist = Vector3.Distance(this.transform.position, king.transform.position);
+            if (kingDist < 3)
+            {
+                king.gameObject.GetComponent<KingNav>().health -= 50;
+                GameObject assassinExplosionInst = Instantiate(assassinExplosion);
+                assassinExplosionInst.transform.position = this.transform.position;
+                Destroy(this.gameObject);
             }
         }
         else
@@ -79,9 +91,11 @@ public class peasantController : MonoBehaviour {
         if (Random.Range(0, chanceToBecomeAssassinOneIn) < 1)
         {
             Assassin = true;
+            goal = king.transform.position;
             navi.speed = assassinSpeed;
             directionChangeInterval = 2f;
             characterMesh.GetComponent<Renderer>().material = assassinMat;
+            navi.SetDestination(goal);
         }
     }
 }
