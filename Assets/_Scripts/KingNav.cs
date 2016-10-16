@@ -10,6 +10,7 @@ public class KingNav : MonoBehaviour {
     public bool reached_goal = true;
     private NavMeshAgent agent;
     public Vector3 goal;
+    public float health;
 
     public float directionChangeInterval = 1f;
     private float timeOfLastDirectionChange = 0f;
