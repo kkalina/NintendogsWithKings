@@ -15,9 +15,7 @@ namespace UnitySampleAssets.Effects
             // be pushed by physics force
             yield return null;
 
-            float multiplier = GetComponent<ParticleSystemMultiplier>().multiplier;
-
-            float r = 10*multiplier;
+            float r = 10f;
             Collider[] cols = Physics.OverlapSphere(transform.position, r);
             List<Rigidbody> rigidbodies = new List<Rigidbody>();
             foreach (var col in cols)
@@ -29,7 +27,7 @@ namespace UnitySampleAssets.Effects
             }
             foreach (var rb in rigidbodies)
             {
-                rb.AddExplosionForce(explosionForce*multiplier, transform.position, r, 1*multiplier, ForceMode.Impulse);
+                rb.AddExplosionForce(explosionForce, transform.position, r, 1, ForceMode.Impulse);
             }
         }
     }
