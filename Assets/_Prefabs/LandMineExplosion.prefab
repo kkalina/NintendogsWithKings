@@ -430,6 +430,12 @@ MonoBehaviour:
   peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
     type: 2}
   vaseDebris: {fileID: 1000013799350208, guid: 5397116540618a249b5bb3189997ee3a, type: 2}
+  peasantKillMessage: {fileID: 1000013413977738, guid: 1f073f04ea5937e4e90a418189ea97b4,
+    type: 2}
+  assassinKillMessage: {fileID: 1000013376529708, guid: 1937b82a831985643a1316f0ffee258c,
+    type: 2}
+  playerObj: {fileID: 0}
+  messageAnchor: {fileID: 0}
   explosionForce: 100
 --- !u!114 &114000012699299506
 MonoBehaviour:

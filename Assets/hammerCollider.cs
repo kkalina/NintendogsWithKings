@@ -10,6 +10,10 @@ public class hammerCollider : MonoBehaviour
     public float awakeTime = 0f;
     public float duration = 0.2f;
     public GameObject sound;
+    public GameObject peasantKillMessage;
+    public GameObject assassinKillMessage;
+    public GameObject playerObj;
+    public GameObject messageAnchor;
 
     void Awake()
     {
@@ -41,6 +45,25 @@ public class hammerCollider : MonoBehaviour
             {
                 deadRigid.AddForce(this.transform.forward * peasantHitForce);
             }
+
+
+            if (!other.gameObject.GetComponent<peasantController>().Assassin)
+            {
+                GameObject PKMI = Instantiate(peasantKillMessage);
+                PKMI.transform.position = messageAnchor.transform.position;
+                PKMI.transform.rotation = messageAnchor.transform.rotation;
+                PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                playerObj.GetComponent<FPSControl>().damage += 500;
+            }
+            else
+            {
+                GameObject AKMI = Instantiate(assassinKillMessage);
+                AKMI.transform.position = messageAnchor.transform.position;
+                AKMI.transform.rotation = messageAnchor.transform.rotation;
+                AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                playerObj.GetComponent<FPSControl>().damage -= 500;
+            }
+
             Destroy(other.gameObject);
         }else if(other.gameObject.tag == "Brick") {
             Instantiate(sound);

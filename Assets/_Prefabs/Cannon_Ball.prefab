@@ -571,6 +571,13 @@ MonoBehaviour:
     type: 2}
   vaseDebris: {fileID: 1000013799350208, guid: 5397116540618a249b5bb3189997ee3a, type: 2}
   peasantHitForce: 10
+  kingHitForce: 100
+  peasantKillMessage: {fileID: 1000013413977738, guid: 1f073f04ea5937e4e90a418189ea97b4,
+    type: 2}
+  assassinKillMessage: {fileID: 1000013376529708, guid: 1937b82a831985643a1316f0ffee258c,
+    type: 2}
+  playerObj: {fileID: 0}
+  messageAnchor: {fileID: 0}
 --- !u!114 &114000011496567798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -594,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 100
+  explosionForce: 30
 --- !u!135 &135000010104865146
 SphereCollider:
   m_ObjectHideFlags: 1

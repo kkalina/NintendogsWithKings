@@ -13,6 +13,10 @@ public class Bullet : MonoBehaviour {
     public GameObject vaseDebris;
     public float peasantHitForce = 100f;
     public float kingHitForce = 100f;
+    public GameObject peasantKillMessage;
+    public GameObject assassinKillMessage;
+    public GameObject playerObj;
+    public GameObject messageAnchor;
 
 
     void Start () {
@@ -20,7 +24,9 @@ public class Bullet : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * force);
         //rb.AddExplosionForce(force, transform.position + new Vector3 (10, 0, 0 ), rad);
-	}
+        playerObj = GameObject.Find("FPS_Player");
+        messageAnchor = GameObject.Find("MessageAnchor");
+    }
 
     void OnCollisionEnter(Collision other) {
         //other.GetComponent<Rigidbody>().AddExplosionForce(50f, transform.position, 10f);
@@ -57,6 +63,24 @@ public class Bullet : MonoBehaviour {
             {
                 deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity*peasantHitForce);
             }
+
+            if (!other.gameObject.GetComponent<peasantController>().Assassin)
+            {
+                GameObject PKMI = Instantiate(peasantKillMessage);
+                PKMI.transform.position = messageAnchor.transform.position;
+                PKMI.transform.rotation = messageAnchor.transform.rotation;
+                PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                playerObj.GetComponent<FPSControl>().damage += 500;
+            }
+            else
+            {
+                GameObject AKMI = Instantiate(assassinKillMessage);
+                AKMI.transform.position = messageAnchor.transform.position;
+                AKMI.transform.rotation = messageAnchor.transform.rotation;
+                AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                playerObj.GetComponent<FPSControl>().damage -= 500;
+            }
+
             Destroy(other.gameObject);
         }
         else
