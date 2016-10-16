@@ -14,7 +14,7 @@ public class KingHealth : MonoBehaviour {
         playerController = playerObj.GetComponent<FPSControl>();
         king = playerController.King;
         health = king.GetComponent<KingNav>().health;
-        healthDisplay = this.gameObject.GetComponent<TextMesh>();
+        healthDisplay = gameObject.GetComponent<TextMesh>();
         healthDisplay.text = health.ToString("F2");
     }
 	
