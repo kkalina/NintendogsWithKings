@@ -23,6 +23,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject CameraMount;
     public GameObject MineLauncherIronSight;
     public GameObject GameOverCanvas;
+    public GameObject King;
 
     public int damage = 0;
 
@@ -55,6 +56,10 @@ public class FPSControl : MonoBehaviour {
 
 		transform.localRotation = Quaternion.Euler(rot);
 		camTrans.localRotation = Quaternion.Euler(camRot);
+
+		if (King.GetComponent<KingNav>().health < 0) {
+			GameOverCanvas.SetActive(true);
+		}
 	}
 
 	void FixedUpdate() {
