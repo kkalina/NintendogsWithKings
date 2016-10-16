@@ -180,7 +180,7 @@ GameObject:
   - 65: {fileID: 327207794}
   m_Layer: 0
   m_Name: Dialogue Trigger (4)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,7 @@ GameObject:
   - 65: {fileID: 546771717}
   m_Layer: 0
   m_Name: Dialogue Trigger (6)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +443,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 641362425}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -59.600006, y: 11.7, z: 15.8}
+  m_LocalPosition: {x: -59.600006, y: 20.4, z: 15.8}
   m_LocalScale: {x: 185.25, y: 86.23018, z: 1.0000018}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
@@ -754,7 +754,7 @@ GameObject:
   - 65: {fileID: 1118598261}
   m_Layer: 0
   m_Name: Dialogue Trigger (2)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,7 +795,7 @@ GameObject:
   - 65: {fileID: 1165070462}
   m_Layer: 0
   m_Name: Dialogue Trigger (7)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -836,7 +836,7 @@ GameObject:
   - 65: {fileID: 1308031212}
   m_Layer: 0
   m_Name: Dialogue Trigger (8)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -877,7 +877,7 @@ GameObject:
   - 65: {fileID: 1513833221}
   m_Layer: 0
   m_Name: Dialogue Trigger (3)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,7 +918,6 @@ GameObject:
   - 135: {fileID: 1634842470}
   - 198: {fileID: 1634842469}
   - 199: {fileID: 1634842468}
-  - 114: {fileID: 1634842472}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1020,7 +1019,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 42838920
+  randomSeed: -1493703763
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2724,8 +2723,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 24.82
-  m_Center: {x: 0, y: 0, z: 10.94}
+  m_Radius: 16.6
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1634842471
 Transform:
   m_ObjectHideFlags: 0
@@ -2739,17 +2738,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!114 &1634842472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1634842467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa8cf4048ec2064d82b7ac616450195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1665686516 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 2334f263bd4f77f4787a90ab4194ea67, type: 3}
@@ -2780,7 +2768,7 @@ GameObject:
   - 65: {fileID: 1721065774}
   m_Layer: 0
   m_Name: Dialogue Trigger (1)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2931,7 +2919,7 @@ GameObject:
   - 65: {fileID: 1863938205}
   m_Layer: 0
   m_Name: Dialogue Trigger (5)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2972,7 +2960,7 @@ GameObject:
   - 65: {fileID: 1920627915}
   m_Layer: 0
   m_Name: Dialogue Trigger (9)
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3013,7 +3001,7 @@ GameObject:
   - 65: {fileID: 1935406542}
   m_Layer: 0
   m_Name: Dialogue Trigger
-  m_TagString: Dialogue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3132,7 +3120,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -387.72
+      value: -124.75
       objectReference: {fileID: 0}
     - target: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3140,7 +3128,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.88
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3169,10 +3157,6 @@ Prefab:
     - target: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -87.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 177450, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49f7f7817277df4784d400a649b1df2, type: 2}

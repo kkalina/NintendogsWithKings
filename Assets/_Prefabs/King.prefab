@@ -25,7 +25,6 @@ GameObject:
   - 195: {fileID: 195000012236785710}
   - 114: {fileID: 114000014266909908}
   - 135: {fileID: 135000011106180184}
-  - 114: {fileID: 114000010721731678}
   m_Layer: 14
   m_Name: King
   m_TagString: Untagged
@@ -82,17 +81,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012227048532}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114000010721731678
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012227048532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd04383e49c76664bb42cb439fa8a29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000014266909908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c25c37ff5ae6264f9867b8fb699c789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  king: {fileID: 0}
+  king: {fileID: 4000011917696776}
   player: {fileID: 0}
   wait_time: 0.5
   follow_time: 4
@@ -113,7 +101,6 @@ MonoBehaviour:
   goal: {x: 0, y: 0, z: 0}
   directionChangeInterval: 2
   activationDistance: 200
-  health: 200
 --- !u!135 &135000011106180184
 SphereCollider:
   m_ObjectHideFlags: 1

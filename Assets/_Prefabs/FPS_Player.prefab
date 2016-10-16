@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177450}
   m_LocalRotation: {x: -0, y: -0.9938044, z: -0, w: 0.11114333}
-  m_LocalPosition: {x: 22.4, y: 2.3, z: -12.8}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -167.53001, z: 0}
   m_Children:
@@ -195,10 +195,6 @@ MonoBehaviour:
   camRot: {x: 0, y: 0, z: 0}
   CameraMount: {fileID: 1000012203193756}
   MineLauncherIronSight: {fileID: 1000014195918926}
-  GameOverCanvas: {fileID: 0}
-  VictoryCanvas: {fileID: 0}
-  King: {fileID: 0}
-  countdownToWin: 0
   damage: 0
 --- !u!124 &12499554
 Behaviour:
@@ -3133,7 +3129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000012574366184
 GameObject:
   m_ObjectHideFlags: 1
@@ -3827,7 +3823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013113933730
 GameObject:
   m_ObjectHideFlags: 1
@@ -18823,12 +18819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   peasantHitForce: 100
-  brickHitForce: 100
   peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
     type: 2}
-  awakeTime: 0
-  duration: 0.2
-  sound: {fileID: 0}
 --- !u!114 &114000011573309628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18957,7 +18949,6 @@ MonoBehaviour:
   sound: {fileID: 1000013878910424, guid: 945ffa17aef4aff47ade2f8a1a278c64, type: 2}
   colliderBox: {fileID: 1000014062074172}
   swinging: 0
-  activated: 0
 --- !u!114 &114000013314776758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18975,7 +18966,6 @@ MonoBehaviour:
   mineObj: {fileID: 1000013810813830, guid: 8aeac428376ee2a43a08787b3306ed52, type: 2}
   muzzle: {fileID: 1000014197722438}
   sound: {fileID: 1000010933791252, guid: 224063651f67afe4db0b34babc316743, type: 2}
-  king: {fileID: 0}
   launchVel: 35
   ROF: 0.75
 --- !u!114 &114000013440572912

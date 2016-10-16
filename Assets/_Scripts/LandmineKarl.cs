@@ -19,6 +19,8 @@ public class LandmineKarl : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+            king = GameObject.Find("King");
+        
     }
 
     void FixedUpdate()

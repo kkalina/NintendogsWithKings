@@ -14,6 +14,11 @@ public class mineLauncher : MonoBehaviour {
     public float ROF = 1;
     private float lastFireTime = -1f;
 
+    void Start()
+    {
+        king = GameObject.Find("King");
+    }
+
 	void Update () {
 
         if (Input.GetMouseButtonDown(0)&&(Time.time > lastFireTime+ROF))
@@ -23,7 +28,7 @@ public class mineLauncher : MonoBehaviour {
             launcherObj.GetComponent<Animator>().SetTrigger("fire");
             tireObj.GetComponent<spin>().speed = 35;
             GameObject mineInst = Instantiate(mineObj);
-            mineInst.GetComponent<LandmineKarl>().king = king;
+            //mineInst.GetComponent<LandmineKarl>().king = king;
             mineInst.transform.position = muzzle.transform.position;
             mineInst.transform.rotation = muzzle.transform.rotation;
             mineInst.GetComponent<Rigidbody>().velocity = muzzle.transform.forward*launchVel;

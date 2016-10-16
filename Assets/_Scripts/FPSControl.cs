@@ -23,10 +23,6 @@ public class FPSControl : MonoBehaviour {
 
     public GameObject CameraMount;
     public GameObject MineLauncherIronSight;
-    public GameObject GameOverCanvas;
-    public GameObject VictoryCanvas;
-    public GameObject King;
-    public float countdownToWin;
 
     public int damage = 0;
 
@@ -52,20 +48,6 @@ public class FPSControl : MonoBehaviour {
 		float mDeltaX = Input.GetAxis("Mouse X");
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
-		if (King.GetComponent<KingNav>().health < 0) {
-			countdownToWin = 99999999f;
-			GameOverCanvas.SetActive(true);
-			mDeltaY = 0;
-			mDeltaX = 0;
-		}
-		if (countdownToWin <= 0) {
-			King.GetComponent<KingNav>().health = 99999999f;
-			countdownToWin = 0;
-			VictoryCanvas.SetActive(true);
-			mDeltaY = 0;
-			mDeltaX = 0;
-		}
-
 		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
 
 		camRot.x -= mDeltaY * vertMult;
@@ -75,8 +57,6 @@ public class FPSControl : MonoBehaviour {
 
 		transform.localRotation = Quaternion.Euler(rot);
 		camTrans.localRotation = Quaternion.Euler(camRot);
-		countdownToWin -= Time.deltaTime;
-
 	}
 
 	void FixedUpdate() {
