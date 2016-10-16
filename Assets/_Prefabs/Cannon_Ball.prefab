@@ -567,6 +567,9 @@ MonoBehaviour:
   crater: {fileID: 1000012501594684, guid: 861e320e073d2a74fb8bb90e39e9f51d, type: 2}
   ricochetObj: {fileID: 1000013878910424, guid: 945ffa17aef4aff47ade2f8a1a278c64,
     type: 2}
+  peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
+    type: 2}
+  peasantHitForce: 10
 --- !u!114 &114000011496567798
 MonoBehaviour:
   m_ObjectHideFlags: 1

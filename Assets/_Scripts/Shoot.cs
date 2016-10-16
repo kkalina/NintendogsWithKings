@@ -25,7 +25,7 @@ public class Shoot : MonoBehaviour {
         this.transform.DOShakeScale(.4f, new Vector3(0, 0, 2f), 10, 1, true);
         this.transform.DOPunchRotation(new Vector3(90f, 10f, 10f), .4f, 1, .1f);
         this.transform.DOPunchPosition(new Vector3(0f, 0f, -.8f), .4f, 1, 1, false);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1f);
         shooting = false;
     }
 }

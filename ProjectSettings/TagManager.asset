@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Landmine
   - Wall
+  - Peasant
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Debris
   - Player
   - Bullet
-  - 
+  - CliffBorder
   - 
   - 
   - 

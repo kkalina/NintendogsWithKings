@@ -3,7 +3,7 @@ using System.Collections;
 
 public class landmineStick : MonoBehaviour {
 
-    private bool stuck = false;
+    public bool stuck = false;
     
     void OnCollisionEnter(Collision collision)
     {

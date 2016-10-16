@@ -12,6 +12,7 @@ public class LandmineKarl : MonoBehaviour
     public GameObject lightObj;
     public float blink = 1f;
     public float lastBlink = 0f;
+    public GameObject landmineBase;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class LandmineKarl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if ((Time.time > (startTime + armDelay))&&(!armed))
+        //if ((Time.time > (startTime + armDelay))&&(!armed))
+        if(landmineBase.GetComponent<landmineStick>().stuck)
         {
             armed = true;
             lightObj.SetActive(true);

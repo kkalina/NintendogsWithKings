@@ -158,6 +158,7 @@ GameObject:
   - 82: {fileID: 82000011560341788}
   - 114: {fileID: 114000013391434370}
   - 114: {fileID: 114000012699299506}
+  - 114: {fileID: 114000012532257404}
   m_Layer: 0
   m_Name: LandMineExplosion
   m_TagString: Untagged
@@ -415,6 +416,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000012532257404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012695897024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d13512c6483d4e49ae6c1df7426bca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
+    type: 2}
+  explosionForce: 100
 --- !u!114 &114000012699299506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,7 +448,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012695897024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
