@@ -24,7 +24,10 @@ public class KingHealth : MonoBehaviour {
     	if (king == null) {
     		king = playerController.King;
     	}
-        health = king.GetComponent<KingNav>().health;
-        healthDisplay.text = health.ToString("F2");
+
+        if (health > king.GetComponent<KingNav>().health) {
+        	health = king.GetComponent<KingNav>().health
+	    	healthDisplay.text = health.ToString("F2");
+	    }
 	}
 }
