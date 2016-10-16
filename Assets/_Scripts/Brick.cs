@@ -15,7 +15,8 @@ public class Brick : MonoBehaviour {
         startTime = Time.time;
         playerObj = GameObject.Find("FPS_Player");
         playerController = playerObj.GetComponent<FPSControl>();
-        this.gameObject.GetComponent<Rigidbody>().Sleep();
+        if(this.gameObject.GetComponent<Rigidbody>()!=null)
+            this.gameObject.GetComponent<Rigidbody>().Sleep();
     }
 
 	void OnCollisionEnter(Collision Other)
@@ -34,18 +35,20 @@ public class Brick : MonoBehaviour {
 
         if (Other.gameObject.tag == "Peasant")
         {
-
-            GameObject deadPeasantInst = Instantiate(peasantDead);
-            deadPeasantInst.transform.position = Other.gameObject.transform.position;
-            deadPeasantInst.transform.rotation = Other.gameObject.transform.rotation;
-            //Rigidbody rigidPeasant = deadPeasantInst.GetComponent<Rigidbody>();
-            //Rigidbody[] deadPeasantRigidbodies;
-            //deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>();
-            //foreach (Rigidbody deadRigid in deadPeasantRigidbodies)
-            //{
-            //    deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity * peasantHitForce);
-            //}
-            Destroy(Other.gameObject);
+            if ((this.gameObject.GetComponent<Rigidbody>().velocity.x > 5) || (this.gameObject.GetComponent<Rigidbody>().velocity.y > 5) || (this.gameObject.GetComponent<Rigidbody>().velocity.z > 5))
+            {
+                GameObject deadPeasantInst = Instantiate(peasantDead);
+                deadPeasantInst.transform.position = Other.gameObject.transform.position;
+                deadPeasantInst.transform.rotation = Other.gameObject.transform.rotation;
+                //Rigidbody rigidPeasant = deadPeasantInst.GetComponent<Rigidbody>();
+                //Rigidbody[] deadPeasantRigidbodies;
+                //deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>();
+                //foreach (Rigidbody deadRigid in deadPeasantRigidbodies)
+                //{
+                //    deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity * peasantHitForce);
+                //}
+                Destroy(Other.gameObject);
+            }
         }
     }
 }

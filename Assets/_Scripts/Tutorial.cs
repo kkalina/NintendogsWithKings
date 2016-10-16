@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.Collections;
 
 public class Tutorial : MonoBehaviour {
@@ -15,7 +14,8 @@ public class Tutorial : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         Debug.Log("here");
         event_num++;
-        Destroy(other);
+        if(other.tag == "Dialogue")
+            Destroy(other);
     }
     void Update() {
         switch (event_num) {
@@ -32,10 +32,10 @@ public class Tutorial : MonoBehaviour {
                 message.text = "Switch weapons with 1, 2, and 3";
                 break;
             case 5:
-                message.text = "Try to cause the most damage!!!!!!!!!";
+                message.text = "Protect the king but be careful not \n to destroy buildings or attack peasents";
                 break;
             case 6:
-                message.text = "I mean save the king... Long live the king...";
+                message.text = "Long live the king!";
                 break;
             case 7:
                 message.text = "Did I mention that as the royal bodyguard you don't take damage?";
