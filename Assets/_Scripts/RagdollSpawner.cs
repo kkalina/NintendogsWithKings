@@ -16,7 +16,7 @@ public class RagdollSpawner : MonoBehaviour {
     }
 
     void Update() {
-    	counter += Time.timeDelta;
+    	counter += Time.deltaTime;
     	if (counter > 60 && spawnTime > 1) {
     		counter = 0;
     		spawnTime--;
