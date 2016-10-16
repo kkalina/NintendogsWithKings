@@ -3,13 +3,12 @@ using System.Collections;
 
 public class FPSControl : MonoBehaviour {
 
-    public enum Weapons { Mine_Launcher, Cannon, Hammer};
+    public enum Weapons { Mine_Launcher, Cannon };
     private Weapons currentWeapon;
     public Weapons selectedWeapon;
 
     public GameObject cannon;
     public GameObject mineLauncher;
-    public GameObject hammer;
 
 	Transform camTrans;
 
@@ -23,6 +22,10 @@ public class FPSControl : MonoBehaviour {
 
     public GameObject CameraMount;
     public GameObject MineLauncherIronSight;
+    public GameObject GameOverCanvas;
+    public GameObject VictoryCanvas;
+    public GameObject King;
+    public float countdownToWin;
 
     public int damage = 0;
 
@@ -30,7 +33,6 @@ public class FPSControl : MonoBehaviour {
 	void Start () {
 		camTrans = transform.Find ("Camera");
 		rigid = GetComponent<Rigidbody>();
-        Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -39,8 +41,6 @@ public class FPSControl : MonoBehaviour {
             selectedWeapon = Weapons.Mine_Launcher;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             selectedWeapon = Weapons.Cannon;
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            selectedWeapon = Weapons.Hammer;
         rot = transform.localRotation.eulerAngles;
 		camRot = camTrans.localRotation.eulerAngles;
 		if (camRot.x > 180) camRot.x -= 360;
@@ -57,6 +57,17 @@ public class FPSControl : MonoBehaviour {
 
 		transform.localRotation = Quaternion.Euler(rot);
 		camTrans.localRotation = Quaternion.Euler(camRot);
+		countdownToWin -= Time.deltaTime;
+
+		if (King.GetComponent<KingNav>().health < 0) {
+			countdownToWin = 99999999f;
+			GameOverCanvas.SetActive(true);
+		}
+		if (countdownToWin <= 0) {
+			King.GetComponent<KingNav>().health = 99999999f;
+			countdownToWin = 0;
+			VictoryCanvas.SetActive(true);
+		}
 	}
 
 	void FixedUpdate() {
@@ -67,19 +78,11 @@ public class FPSControl : MonoBehaviour {
             {
                 cannon.SetActive(true);
                 mineLauncher.SetActive(false);
-                hammer.SetActive(false);
             }
             else if(selectedWeapon == Weapons.Mine_Launcher)
             {
                 cannon.SetActive(false);
                 mineLauncher.SetActive(true);
-                hammer.SetActive(false);
-            }
-            else if (selectedWeapon == Weapons.Hammer)
-            {
-                cannon.SetActive(false);
-                mineLauncher.SetActive(false);
-                hammer.SetActive(true);
             }
             currentWeapon = selectedWeapon;
         }

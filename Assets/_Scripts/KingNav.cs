@@ -15,6 +15,7 @@ public class KingNav : MonoBehaviour {
     private float timeOfLastDirectionChange = 0f;
 
     public float activationDistance = 5f;
+    public float health;
 
     // Use this for initialization
     void Start() {
