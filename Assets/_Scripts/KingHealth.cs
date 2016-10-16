@@ -21,6 +21,9 @@ public class KingHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+    	if (king == null) {
+    		king = playerController.King;
+    	}
         health = king.GetComponent<KingNav>().health;
         healthDisplay.text = health.ToString("F2");
 	}
