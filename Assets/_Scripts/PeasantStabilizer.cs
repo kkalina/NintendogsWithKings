@@ -19,16 +19,18 @@ public class PeasantStabilizer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Add upward force to keep ragdoll upright
+        core.AddForce(Vector3.up * stabilizerForce);
+		agent = GetComponent<NavMeshAgent>();
         destination.x = Random.Range(xMin, xMax);
 		destination.z = Random.Range(zMin, zMax);
-
-		agent = GetComponent<NavMeshAgent>();
 	    agent.SetDestination(destination);
 		cooldown = Random.Range(5,20); 
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
+
 		// Add upward force to keep ragdoll upright
         core.AddForce(Vector3.up * stabilizerForce);
 
