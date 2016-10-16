@@ -14,6 +14,7 @@ public class Brick : MonoBehaviour {
         startTime = Time.time;
         playerObj = GameObject.Find("FPS_Player");
         playerController = playerObj.GetComponent<FPSControl>();
+        this.gameObject.GetComponent<Rigidbody>().Sleep();
     }
 
 	void OnCollisionEnter(Collision Other)
@@ -27,6 +28,7 @@ public class Brick : MonoBehaviour {
             brickDebrisInst.transform.rotation = this.transform.rotation;*/
             //Destroy(this.gameObject);
             broken = true;
+            this.gameObject.GetComponent<Rigidbody>().Sleep();
         }
     }
 }

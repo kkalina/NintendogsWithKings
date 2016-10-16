@@ -17,25 +17,7 @@ public class KingNav : MonoBehaviour {
       //  StartCoroutine(changeDirection());
     }
 
-    public IEnumerator changeDirection() {
-
-        // Debug.Log("over here");
-        Vector3 direction = Random.insideUnitSphere * max_walk_distance;
-        direction += transform.position;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(direction, out hit, Random.Range(0f, max_walk_distance), 1);
-
-        Vector3 destination = hit.position;
-        agent.SetDestination(destination);
-
-        yield return new WaitForSeconds(wait_time);
-    }
-
-    public IEnumerator whistle() {
-
-        yield return new WaitForSeconds(wait_time);
-    }
-
+    //Lets you whistle
     void OnTriggerStay(Collider other) {
         if(other.tag == "Player") {
             if (Input.GetKeyDown(KeyCode.E)) {
@@ -48,13 +30,14 @@ public class KingNav : MonoBehaviour {
 
     void Update() {
         if (!reached_goal) {
-            Debug.Log(king.position);
-            Debug.Log(goal);
+            //Debug.Log(king.position);
+            //Debug.Log(goal);
             if (king.position.x == goal.x && king.position.z == goal.z) {
                 reached_goal = true;
             }
         }
         else {
+            //random movement
             Vector3 direction = Random.insideUnitSphere * max_walk_distance;
             direction += transform.position;
             NavMeshHit hit;
