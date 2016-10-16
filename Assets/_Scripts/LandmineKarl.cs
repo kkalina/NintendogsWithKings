@@ -14,6 +14,7 @@ public class LandmineKarl : MonoBehaviour
     public float lastBlink = 0f;
     public GameObject landmineBase;
     //public GameObject crater;
+    public GameObject king;
 
     void Start()
     {
@@ -49,6 +50,12 @@ public class LandmineKarl : MonoBehaviour
             //GameObject craterInst = Instantiate(crater);
             //crater.transform.position = this.transform.position;
             //crater.transform.rotation = this.transform.rotation;
+
+            if (Vector3.Distance(this.transform.position, king.transform.position) < 50)
+            {
+
+            }
+
             Destroy(parentObj);
         }
     }

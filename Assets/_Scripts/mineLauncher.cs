@@ -9,6 +9,7 @@ public class mineLauncher : MonoBehaviour {
     public GameObject mineObj;
     public GameObject muzzle;
     public GameObject sound;
+    public GameObject king;
     public float launchVel = 10f;
     public float ROF = 1;
     private float lastFireTime = -1f;
@@ -22,6 +23,7 @@ public class mineLauncher : MonoBehaviour {
             launcherObj.GetComponent<Animator>().SetTrigger("fire");
             tireObj.GetComponent<spin>().speed = 35;
             GameObject mineInst = Instantiate(mineObj);
+            mineInst.GetComponent<LandmineKarl>().king = king;
             mineInst.transform.position = muzzle.transform.position;
             mineInst.transform.rotation = muzzle.transform.rotation;
             mineInst.GetComponent<Rigidbody>().velocity = muzzle.transform.forward*launchVel;
