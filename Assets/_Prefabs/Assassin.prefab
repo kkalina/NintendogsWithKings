@@ -588,7 +588,7 @@ GameObject:
   - 195: {fileID: 195000013380557636}
   - 114: {fileID: 114000013945516820}
   m_Layer: 0
-  m_Name: Assassin Container
+  m_Name: Assassin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1951,8 +1951,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 10
-  king: {fileID: 0}
-  player: {fileID: 0}
+  king: {fileID: 1000012227048532, guid: 94e3d9881cae6e342a4cd5895abb3928, type: 2}
+  player: {fileID: 1000012227048532, guid: 94e3d9881cae6e342a4cd5895abb3928, type: 2}
 --- !u!135 &135000010301086058
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -592,7 +592,7 @@ MonoBehaviour:
   explosion: {fileID: 1000012695897024, guid: 1e3925cb6d71c6c4cb436a19289d10b9, type: 2}
   armDelay: 1
   armed: 0
-  light: {fileID: 1000010831404974}
+  lightObj: {fileID: 1000010831404974}
   blink: 1
   lastBlink: 0
 --- !u!114 &114000012591214162

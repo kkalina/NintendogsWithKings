@@ -9,7 +9,7 @@ public class LandmineKarl : MonoBehaviour
     private float startTime = 0f;
     public float armDelay = 2f;
     public bool armed = false;
-    public GameObject light;
+    public GameObject lightObj;
     public float blink = 1f;
     public float lastBlink = 0f;
 
@@ -23,14 +23,14 @@ public class LandmineKarl : MonoBehaviour
         if ((Time.time > (startTime + armDelay))&&(!armed))
         {
             armed = true;
-            light.SetActive(true);
+            lightObj.SetActive(true);
         }
         if (armed && (Time.time>(lastBlink+blink)))
         {
-            if (light.active)
-                light.SetActive(false);
+            if (lightObj.active)
+                lightObj.SetActive(false);
             else
-                light.SetActive(true);
+                lightObj.SetActive(true);
 
             lastBlink = Time.time;
         }

@@ -11,12 +11,19 @@ public class KingNav : MonoBehaviour {
     private NavMeshAgent agent;
     public Vector3 goal;
 
+    public float directionChangeInterval = 1f;
+    private float timeOfLastDirectionChange = 0f;
+
+    public float activationDistance = 5f;
+
     // Use this for initialization
     void Start() {
         agent = GetComponent<NavMeshAgent>();
       //  StartCoroutine(changeDirection());
+      
     }
 
+    /*
     //Lets you whistle
     void OnTriggerStay(Collider other) {
         if(other.tag == "Player") {
@@ -26,9 +33,19 @@ public class KingNav : MonoBehaviour {
                 reached_goal = false;
             }
         }
+    }*/
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E)&&(Mathf.Sqrt(Mathf.Pow(player.position.x,2)+ Mathf.Pow(player.position.z, 2))<=activationDistance))
+        {
+            agent.SetDestination(player.position);
+            goal = player.position;
+            reached_goal = false;
+        }
     }
 
-    void Update() {
+    void FixedUpdate() {
         if (!reached_goal) {
             //Debug.Log(king.position);
             //Debug.Log(goal);
@@ -36,7 +53,8 @@ public class KingNav : MonoBehaviour {
                 reached_goal = true;
             }
         }
-        else {
+        else if(Time.time > (timeOfLastDirectionChange+directionChangeInterval)&&(reached_goal))
+        {
             //random movement
             Vector3 direction = Random.insideUnitSphere * max_walk_distance;
             direction += transform.position;
@@ -45,6 +63,7 @@ public class KingNav : MonoBehaviour {
 
             Vector3 destination = hit.position;
             agent.SetDestination(destination);
+            timeOfLastDirectionChange = Time.time;
         }
     }
 }

@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012227048532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2494383, y: 1.71, z: -23}
+  m_LocalPosition: {x: -11.288101, y: 2.03, z: -31.021027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -93,12 +93,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   king: {fileID: 4000011917696776}
-  player: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
+  player: {fileID: 0}
   wait_time: 0.5
   follow_time: 4
   max_walk_distance: 50
   reached_goal: 1
   goal: {x: 0, y: 0, z: 0}
+  directionChangeInterval: 2
+  activationDistance: 200
 --- !u!135 &135000011106180184
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -132,7 +134,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1000012227048532}
   m_Enabled: 1
   m_Radius: 0.5
-  m_Speed: 25
+  m_Speed: 5
   m_Acceleration: 25
   avoidancePriority: 50
   m_AngularSpeed: 120
