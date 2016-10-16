@@ -18,7 +18,7 @@ public class Balloon : MonoBehaviour {
 		drop = Instantiate(dropPrefab[random], pos, Quaternion.identity) as GameObject;
 		pointA = transform.position;
 		pointB = new Vector3(pointA.x, pointA.y-0.5f, pointA.z);
-		timer = Random.Range(10f,180f);
+		timer = Random.Range(10f,60f);
 	}
 	
 	// Update is called once per frame

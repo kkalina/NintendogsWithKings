@@ -19,7 +19,6 @@ public class KingNav : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        health = 200f;
         agent = GetComponent<NavMeshAgent>();
       //  StartCoroutine(changeDirection());
       

@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013274500222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.2908497, y: 23.2, z: -35.5}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -158,10 +158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropPrefab:
-  - {fileID: 1000012139932576, guid: 08433027b9c749544b8d3c1c32f45ec5, type: 2}
-  - {fileID: 1000010356091494, guid: db5da48889446694cb3f6bff26a6deaa, type: 2}
-  - {fileID: 1000013211539032, guid: fe4fe7b616c9ff64b8ec5b291ff68bf3, type: 2}
+  - {fileID: 100000, guid: fbccfc2accd8a514ebbbc2d1437c00c2, type: 2}
+  - {fileID: 100000, guid: 965f7e21531f1c14cb5625388d2b2409, type: 2}
+  - {fileID: 100000, guid: d2ab2f0b695a9d843aba2c6751661b1e, type: 2}
   timer: 0
+  whistle: {fileID: 8300000, guid: 3fa8e527f0b50ec4aa93d39dfe09a52b, type: 3}
 --- !u!136 &136000013189499438
 CapsuleCollider:
   m_ObjectHideFlags: 1
