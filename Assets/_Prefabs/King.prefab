@@ -25,7 +25,7 @@ GameObject:
   - 195: {fileID: 195000012236785710}
   - 114: {fileID: 114000014266909908}
   - 135: {fileID: 135000011106180184}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: King
   m_TagString: Untagged
   m_Icon: {fileID: 0}

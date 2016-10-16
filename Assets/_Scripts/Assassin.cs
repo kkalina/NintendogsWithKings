@@ -13,6 +13,10 @@ public class Assassin : MonoBehaviour {
     private bool attack_player = false;
 
 
+    public float x_k;
+    public float z_k;
+
+
     public float directionChangeInterval = 1f;
     private float timeOfLastDirectionChange = 0f;
 
@@ -23,12 +27,13 @@ public class Assassin : MonoBehaviour {
         if(rand % 42 == 0) {
             attack_player = true;
         }
+        king = GameObject.Find("King");
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        float x_k = king.transform.position.x;
-        float z_k = king.transform.position.z;
+        x_k = king.transform.position.x;
+        z_k = king.transform.position.z;
         /*
         float x_p = player.transform.position.x;
         float z_p = player.transform.position.z;
