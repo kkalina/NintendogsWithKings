@@ -2,6 +2,14 @@
 using System.Collections;
 
 public class FPSControl : MonoBehaviour {
+
+    public enum Weapons { Mine_Launcher, Cannon };
+    private Weapons currentWeapon;
+    public Weapons selectedWeapon;
+
+    public GameObject cannon;
+    public GameObject mineLauncher;
+
 	Transform camTrans;
 
 	public float	vertMult=0.5f, vertMin=-30, vertMax=30;
@@ -25,7 +33,11 @@ public class FPSControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rot = transform.localRotation.eulerAngles;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            selectedWeapon = Weapons.Mine_Launcher;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            selectedWeapon = Weapons.Cannon;
+        rot = transform.localRotation.eulerAngles;
 		camRot = camTrans.localRotation.eulerAngles;
 		if (camRot.x > 180) camRot.x -= 360;
 		
@@ -44,6 +56,22 @@ public class FPSControl : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+
+        if(selectedWeapon != currentWeapon)
+        {
+            if (selectedWeapon == Weapons.Cannon)
+            {
+                cannon.SetActive(true);
+                mineLauncher.SetActive(false);
+            }
+            else if(selectedWeapon == Weapons.Mine_Launcher)
+            {
+                cannon.SetActive(false);
+                mineLauncher.SetActive(true);
+            }
+            currentWeapon = selectedWeapon;
+        }
+
 		float vX = Input.GetAxis("Horizontal");
 		float vY = Input.GetAxis("Vertical");
 
