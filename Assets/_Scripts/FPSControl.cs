@@ -3,12 +3,13 @@ using System.Collections;
 
 public class FPSControl : MonoBehaviour {
 
-    public enum Weapons { Mine_Launcher, Cannon };
+    public enum Weapons { Mine_Launcher, Cannon , Hammer };
     private Weapons currentWeapon;
     public Weapons selectedWeapon;
 
     public GameObject cannon;
     public GameObject mineLauncher;
+    public GameObject hammer;
 
 	Transform camTrans;
 
@@ -48,6 +49,8 @@ public class FPSControl : MonoBehaviour {
             selectedWeapon = Weapons.Mine_Launcher;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             selectedWeapon = Weapons.Cannon;
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            selectedWeapon = Weapons.Hammer;
         rot = transform.localRotation.eulerAngles;
 		camRot = camTrans.localRotation.eulerAngles;
 		if (camRot.x > 180) camRot.x -= 360;
@@ -83,22 +86,31 @@ public class FPSControl : MonoBehaviour {
 
 	void FixedUpdate() {
 
-        if(selectedWeapon != currentWeapon)
+        if (selectedWeapon != currentWeapon)
         {
             if (selectedWeapon == Weapons.Cannon)
             {
+                cannon.GetComponentInChildren<Shoot>().shooting = false;
                 cannon.SetActive(true);
                 mineLauncher.SetActive(false);
+                hammer.SetActive(false);
             }
-            else if(selectedWeapon == Weapons.Mine_Launcher)
+            else if (selectedWeapon == Weapons.Mine_Launcher)
             {
                 cannon.SetActive(false);
                 mineLauncher.SetActive(true);
+                hammer.SetActive(false);
+            }
+            else if (selectedWeapon == Weapons.Hammer)
+            {
+                cannon.SetActive(false);
+                mineLauncher.SetActive(false);
+                hammer.SetActive(true);
             }
             currentWeapon = selectedWeapon;
         }
 
-		float vX = Input.GetAxis("Horizontal");
+        float vX = Input.GetAxis("Horizontal");
 		float vY = Input.GetAxis("Vertical");
 
 		Vector3 vel = Vector3.zero;

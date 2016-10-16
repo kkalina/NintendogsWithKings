@@ -6,11 +6,13 @@ using DG.Tweening;
 public class Shoot : MonoBehaviour {
     public GameObject bullet;
     public Transform fire_point;
-    bool shooting = false;
+    public bool shooting = false;
     public GameObject cannonSound;
 
     void Start() {
-       // fire_point = transform.FindChild("Fire_Point").transform;
+        // fire_point = transform.FindChild("Fire_Point").transform;
+
+        shooting = false;
     }
 
 	// Update is called once per frame

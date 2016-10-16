@@ -56,7 +56,7 @@ public class LandmineKarl : MonoBehaviour
             Debug.Log("King Dist = " + kingDist);
             if (kingDist < 50)
             {
-                king.gameObject.GetComponent<KingNav>().health -= (int)Mathf.Ceil(50 - kingDist);
+                king.gameObject.GetComponent<KingNav>().health -= (int)Mathf.Ceil((50 - kingDist)*3);
             }
 
             Destroy(parentObj);
