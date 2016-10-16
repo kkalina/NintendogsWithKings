@@ -1128,7 +1128,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: -1789204581
+  randomSeed: -932410470
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2841,7 +2841,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634842467}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -447.7, y: 2.99, z: 3.8}
+  m_LocalPosition: {x: -447.7, y: 2.99, z: 0}
   m_LocalScale: {x: 0.4894017, y: 0.4894017, z: 0.4894017}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children: []
@@ -2855,7 +2855,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1634842467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ca3787a7a201d47b0068c4b3fb7188, type: 3}
+  m_Script: {fileID: 11500000, guid: c18199d18cb54fb4395a26b85e150e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1665686516 stripped

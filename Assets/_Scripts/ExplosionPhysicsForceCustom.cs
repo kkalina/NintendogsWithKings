@@ -9,8 +9,18 @@ namespace UnitySampleAssets.Effects
 
         public GameObject peasantDead;
         public GameObject vaseDebris;
+        public GameObject peasantKillMessage;
+        public GameObject assassinKillMessage;
+        public GameObject playerObj;
+        public GameObject messageAnchor;
 
         public float explosionForce = 4;
+
+        void Awake()
+        {
+            playerObj = GameObject.Find("FPS_Player");
+            messageAnchor = GameObject.Find("MessageAnchor");
+        }
 
         private IEnumerator Start()
         {
@@ -42,6 +52,22 @@ namespace UnitySampleAssets.Effects
                     {
                         if ((deadRigid != null)&&(!rigidbodies.Contains(deadRigid)))
                             rigidbodies.Add(deadRigid);
+                    }
+                    if (!col.gameObject.GetComponent<peasantController>().Assassin)
+                    {
+                        GameObject PKMI = Instantiate(peasantKillMessage);
+                        PKMI.transform.position = messageAnchor.transform.position;
+                        PKMI.transform.rotation = messageAnchor.transform.rotation;
+                        PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        playerObj.GetComponent<FPSControl>().damage += 500;
+                    }
+                    else
+                    {
+                        GameObject AKMI = Instantiate(assassinKillMessage);
+                        AKMI.transform.position = messageAnchor.transform.position;
+                        AKMI.transform.rotation = messageAnchor.transform.rotation;
+                        AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        playerObj.GetComponent<FPSControl>().damage -= 500;
                     }
                     Destroy(col.gameObject);
                 }else

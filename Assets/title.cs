@@ -15,8 +15,7 @@ public class title : MonoBehaviour {
             Application.LoadLevel("Karls_Kastle_Test");
         }else if (Input.GetKeyDown(KeyCode.T))
         {
-
-            Application.LoadLevel("Tutorial");
+            Application.LoadLevel("tutorial");
         }
 	}
 }

@@ -2035,13 +2035,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   core: {fileID: 54000010405653528}
   stabilizerForce: 180
+  target: {fileID: 0}
 --- !u!114 &114000011346835886
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011499023508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a4bf26066f87f345b9140ec6218101e, type: 3}
   m_Name: 
