@@ -66,7 +66,7 @@ public class FPSControl : MonoBehaviour {
 		camTrans.localRotation = Quaternion.Euler(camRot);
 		countdownToWin -= Time.deltaTime;
 
-		if (King.GetComponent<KingNav>().health < 0) {
+		if (King.GetComponent<KingNav>().health <= 0) {
 			mDeltaX = 0;
 			mDeltaY = 0;
 			countdownToWin = 99999999f;
