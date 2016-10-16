@@ -9,8 +9,11 @@ public class Bullet : MonoBehaviour {
     // Use this for initialization
     public GameObject crater;
     public GameObject ricochetObj;
+    public GameObject peasantDead;
+    public float peasantHitForce = 100f;
 
-	void Start () {
+
+    void Start () {
         Destroy(this.gameObject, lifetime);
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * force);
@@ -38,6 +41,21 @@ public class Bullet : MonoBehaviour {
             craterInst.transform.SetParent(other.gameObject.transform);
             Instantiate(ricochetObj);
             //this.gameObject.GetComponent<AudioSource>().Play();
+        }
+        if(other.gameObject.tag == "Peasant")
+        {
+
+            GameObject deadPeasantInst = Instantiate(peasantDead);
+            deadPeasantInst.transform.position = other.gameObject.transform.position;
+            deadPeasantInst.transform.rotation = other.gameObject.transform.rotation;
+            //Rigidbody rigidPeasant = deadPeasantInst.GetComponent<Rigidbody>();
+            Rigidbody[] deadPeasantRigidbodies;
+            deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>();
+            foreach (Rigidbody deadRigid in deadPeasantRigidbodies)
+            {
+                deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity*peasantHitForce);
+            }
+            Destroy(other.gameObject);
         }
     }
 	

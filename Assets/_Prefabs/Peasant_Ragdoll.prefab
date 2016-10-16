@@ -241,7 +241,7 @@ GameObject:
   - 195: {fileID: 195000011055450534}
   m_Layer: 0
   m_Name: Peasant_Ragdoll
-  m_TagString: Untagged
+  m_TagString: Peasant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

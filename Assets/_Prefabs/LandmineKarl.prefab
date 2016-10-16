@@ -595,6 +595,7 @@ MonoBehaviour:
   lightObj: {fileID: 1000010831404974}
   blink: 1
   lastBlink: 0
+  landmineBase: {fileID: 1000013810813830}
 --- !u!114 &114000012591214162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -606,3 +607,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbc3d68806a22f44a7f7a6603e352cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stuck: 0
