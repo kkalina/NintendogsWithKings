@@ -8,6 +8,7 @@ namespace UnitySampleAssets.Effects
     {
 
         public GameObject peasantDead;
+        public GameObject vaseDebris;
 
         public float explosionForce = 4;
 
@@ -30,7 +31,7 @@ namespace UnitySampleAssets.Effects
                 }
                 if(col.gameObject.tag == "Peasant")
                 {
-                    Debug.Log("Peasant Blown Up!");
+                    //Debug.Log("Peasant Blown Up!");
                     GameObject deadPeasantInst = Instantiate(peasantDead);
                     deadPeasantInst.transform.position = col.gameObject.transform.position;
                     deadPeasantInst.transform.rotation = col.gameObject.transform.rotation;
@@ -42,6 +43,13 @@ namespace UnitySampleAssets.Effects
                         if ((deadRigid != null)&&(!rigidbodies.Contains(deadRigid)))
                             rigidbodies.Add(deadRigid);
                     }
+                    Destroy(col.gameObject);
+                }else
+                if (col.gameObject.tag == "Vase")
+                {
+                    GameObject vaseDebrisInst = Instantiate(vaseDebris);
+                    vaseDebrisInst.transform.position = col.gameObject.transform.position;
+                    vaseDebrisInst.transform.rotation = col.gameObject.transform.rotation;
                     Destroy(col.gameObject);
                 }
             }

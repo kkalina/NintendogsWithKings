@@ -8,6 +8,7 @@ public class mineLauncher : MonoBehaviour {
     public GameObject launcherObj;
     public GameObject mineObj;
     public GameObject muzzle;
+    public GameObject sound;
     public float launchVel = 10f;
     public float ROF = 1;
     private float lastFireTime = -1f;
@@ -16,6 +17,7 @@ public class mineLauncher : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)&&(Time.time > lastFireTime+ROF))
         {
+            Instantiate(sound);
             launchArm.GetComponent<Animator>().SetTrigger("fire");
             launcherObj.GetComponent<Animator>().SetTrigger("fire");
             tireObj.GetComponent<spin>().speed = 35;

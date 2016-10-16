@@ -13,6 +13,7 @@ public class LandmineKarl : MonoBehaviour
     public float blink = 1f;
     public float lastBlink = 0f;
     public GameObject landmineBase;
+    //public GameObject crater;
 
     void Start()
     {
@@ -45,6 +46,9 @@ public class LandmineKarl : MonoBehaviour
         {
             GameObject explosionInst = Instantiate(explosion);
             explosionInst.transform.position = parentObj.transform.position + parentObj.transform.up*0.5f;
+            //GameObject craterInst = Instantiate(crater);
+            //crater.transform.position = this.transform.position;
+            //crater.transform.rotation = this.transform.rotation;
             Destroy(parentObj);
         }
     }

@@ -26,7 +26,7 @@ GameObject:
   - 114: {fileID: 114000010055492986}
   m_Layer: 0
   m_Name: Brick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,3 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050ea0e284a493041b16cf15e59cc71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
+    type: 2}

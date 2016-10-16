@@ -429,6 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   peasantDead: {fileID: 1000011499023508, guid: b2b61faec13783f42886c4459d8ca96c,
     type: 2}
+  vaseDebris: {fileID: 1000013799350208, guid: 5397116540618a249b5bb3189997ee3a, type: 2}
   explosionForce: 100
 --- !u!114 &114000012699299506
 MonoBehaviour:

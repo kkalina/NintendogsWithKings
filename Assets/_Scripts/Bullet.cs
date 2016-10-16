@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour {
     public GameObject crater;
     public GameObject ricochetObj;
     public GameObject peasantDead;
+    public GameObject vaseDebris;
     public float peasantHitForce = 100f;
 
 
@@ -55,6 +56,14 @@ public class Bullet : MonoBehaviour {
             {
                 deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity*peasantHitForce);
             }
+            Destroy(other.gameObject);
+        }
+        else
+                if (other.gameObject.tag == "Vase")
+        {
+            GameObject vaseDebrisInst = Instantiate(vaseDebris);
+            vaseDebrisInst.transform.position = other.gameObject.transform.position;
+            vaseDebrisInst.transform.rotation = other.gameObject.transform.rotation;
             Destroy(other.gameObject);
         }
     }

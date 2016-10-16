@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour {
     public GameObject bullet;
     public Transform fire_point;
     bool shooting = false;
+    public GameObject cannonSound;
 
     void Start() {
        // fire_point = transform.FindChild("Fire_Point").transform;
@@ -21,6 +22,7 @@ public class Shoot : MonoBehaviour {
 
     IEnumerator shoot() {
         shooting = true;
+        Instantiate(cannonSound);
         Instantiate(bullet, fire_point.position + fire_point.forward * 1.5f, fire_point.rotation);
         this.transform.DOShakeScale(.4f, new Vector3(0, 0, 2f), 10, 1, true);
         this.transform.DOPunchRotation(new Vector3(90f, 10f, 10f), .4f, 1, .1f);

@@ -8,6 +8,7 @@ public class Brick : MonoBehaviour {
     private GameObject playerObj;
     private FPSControl playerController;
     //public GameObject brickDebris;
+    public GameObject peasantDead;
 
     void Start()
     {
@@ -29,6 +30,22 @@ public class Brick : MonoBehaviour {
             //Destroy(this.gameObject);
             broken = true;
             this.gameObject.GetComponent<Rigidbody>().Sleep();
+        }
+
+        if (Other.gameObject.tag == "Peasant")
+        {
+
+            GameObject deadPeasantInst = Instantiate(peasantDead);
+            deadPeasantInst.transform.position = Other.gameObject.transform.position;
+            deadPeasantInst.transform.rotation = Other.gameObject.transform.rotation;
+            //Rigidbody rigidPeasant = deadPeasantInst.GetComponent<Rigidbody>();
+            //Rigidbody[] deadPeasantRigidbodies;
+            //deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>();
+            //foreach (Rigidbody deadRigid in deadPeasantRigidbodies)
+            //{
+            //    deadRigid.AddForce(this.gameObject.GetComponent<Rigidbody>().velocity * peasantHitForce);
+            //}
+            Destroy(Other.gameObject);
         }
     }
 }

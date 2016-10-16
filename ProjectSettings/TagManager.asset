@@ -8,6 +8,8 @@ TagManager:
   - Landmine
   - Wall
   - Peasant
+  - Brick
+  - Vase
   layers:
   - Default
   - TransparentFX
