@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011800541692}
-  - 114: {fileID: 114000010821587298}
+  - 114: {fileID: 114000010049833684}
   m_Layer: 0
   m_Name: cannon_gun
   m_TagString: Untagged
@@ -471,7 +471,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012705894044}
   m_Mesh: {fileID: 4300010, guid: 81988eb916cfce74e809ed4ee7c92eff, type: 3}
---- !u!114 &114000010821587298
+--- !u!114 &114000010049833684
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -483,4 +483,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1000012775890396, guid: 9e7a1c2724389e94ba3810f1a940f1e5, type: 2}
-  fire_point: {fileID: 0}
+  fire_point: {fileID: 4000012211700366}
