@@ -5,6 +5,7 @@ public class PeasantStabilizer : MonoBehaviour {
 
     public Rigidbody core;
     public float stabilizerForce = 10f;
+    public Transform target;
 	/*public float xMax;
 	public float zMax;
 	public float xMin;
@@ -36,6 +37,7 @@ public class PeasantStabilizer : MonoBehaviour {
             if (isStable)
             {
                 core.AddForce(Vector3.up * stabilizerForce + -core.transform.forward * 30f);
+                //core.transform.LookAt(target);
             }
 
             //Debug.Log(core.velocity.sqrMagnitude);
