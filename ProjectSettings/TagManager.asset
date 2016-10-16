@@ -11,6 +11,7 @@ TagManager:
   - Brick
   - Vase
   - King
+  - Dialogue
   layers:
   - Default
   - TransparentFX

@@ -13,9 +13,9 @@ public class Tutorial : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log("here");
         event_num++;
-        Destroy(other);
+        if(other.tag == "Dialogue")
+            Destroy(other);
     }
     void Update() {
         switch (event_num) {
@@ -32,13 +32,13 @@ public class Tutorial : MonoBehaviour {
                 message.text = "Switch weapons with 1, 2, and 3";
                 break;
             case 5:
-                message.text = "Try to cause the most damage!!!!!!!!!";
+                message.text = "Protect the King while causing the least \n amount of damage to your surroundings and the peasants!";
                 break;
             case 6:
-                message.text = "I mean save the king... Long live the king...";
+                message.text = "Long Live the King!";
                 break;
             case 7:
-                message.text = "Did I mention that as the royal bodyguard you don't take damage?";
+                message.text = "Did I mention that as the royal bodyguard \n you don't take damage?";
                 break;
             case 8:
                 message.text = "If you are near the king, press E to call him towards you";
