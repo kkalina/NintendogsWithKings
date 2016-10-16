@@ -18,9 +18,9 @@ public class landmineStick : MonoBehaviour {
             attachPoint.transform.position = pos;
             attachPoint.transform.SetParent(collision.gameObject.transform);
             attachPoint.transform.localScale = new Vector3(1, 1, 1);
+            this.transform.SetParent(attachPoint.transform);
             this.transform.position = attachPoint.transform.position;
             this.transform.rotation = attachPoint.transform.rotation;
-            this.transform.SetParent(attachPoint.transform);
             Destroy(this.gameObject.GetComponent<Rigidbody>());
             this.gameObject.GetComponent<AudioSource>().Play();
             stuck = true;
