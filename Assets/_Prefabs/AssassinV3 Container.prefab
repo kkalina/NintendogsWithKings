@@ -1884,8 +1884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 5
-  king: {fileID: 1000012227048532, guid: 94e3d9881cae6e342a4cd5895abb3928, type: 2}
-  player: {fileID: 1000012227048532, guid: 94e3d9881cae6e342a4cd5895abb3928, type: 2}
+  king: {fileID: 0}
+  player: {fileID: 0}
   directionChangeInterval: 1
 --- !u!135 &135000010318135348
 SphereCollider:
@@ -2016,7 +2016,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aafb176915efec046bb3ab2e03cf10bb, type: 2}
+  - {fileID: 2100000, guid: b1fa3460362a73249b0ad244720ed8b3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
