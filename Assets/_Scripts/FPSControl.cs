@@ -59,8 +59,8 @@ public class FPSControl : MonoBehaviour {
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
 		if (King.GetComponent<KingNav>().health <= 0) {
-			mDeltaX = 0;
-			mDeltaY = 0;
+			//mDeltaX = 0;
+			//mDeltaY = 0;
 			countdownToWin = 99999999f;
 			GameOverCanvas.SetActive(true);
 		}
