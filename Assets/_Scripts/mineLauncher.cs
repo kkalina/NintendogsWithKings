@@ -14,10 +14,10 @@ public class mineLauncher : MonoBehaviour {
     public float ROF = 1;
     private float lastFireTime = -1f;
 
-    void Start()
-    {
-        king = GameObject.Find("King");
-    }
+    //void Start()
+    //{
+    //    king = GameObject.Find("King");
+    //}
 
 	void Update () {
 

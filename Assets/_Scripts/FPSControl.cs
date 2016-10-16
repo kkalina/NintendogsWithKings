@@ -33,7 +33,9 @@ public class FPSControl : MonoBehaviour {
 	void Start () {
 		camTrans = transform.Find ("Camera");
 		rigid = GetComponent<Rigidbody>();
-	}
+        Cursor.lockState = CursorLockMode.Locked;
+        King = GameObject.Find("King");
+    }
 	
 	// Update is called once per frame
 	void Update () {

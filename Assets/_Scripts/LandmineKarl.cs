@@ -20,7 +20,7 @@ public class LandmineKarl : MonoBehaviour
     {
         startTime = Time.time;
             king = GameObject.Find("King");
-        
+         
     }
 
     void FixedUpdate()
@@ -52,10 +52,11 @@ public class LandmineKarl : MonoBehaviour
             //GameObject craterInst = Instantiate(crater);
             //crater.transform.position = this.transform.position;
             //crater.transform.rotation = this.transform.rotation;
-
-            if (Vector3.Distance(this.transform.position, king.transform.position) < 50)
+            float kingDist = Vector3.Distance(this.transform.position, king.transform.position);
+            Debug.Log("King Dist = " + kingDist);
+            if (kingDist < 50)
             {
-
+                king.gameObject.GetComponent<KingNav>().health -= (int)Mathf.Ceil(50 - kingDist);
             }
 
             Destroy(parentObj);
