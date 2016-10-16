@@ -10,6 +10,8 @@ public class LandmineKarl : MonoBehaviour
     public float armDelay = 2f;
     public bool armed = false;
     public GameObject light;
+    public float blink = 1f;
+    public float lastBlink = 0f;
 
     void Start()
     {
@@ -23,6 +25,16 @@ public class LandmineKarl : MonoBehaviour
             armed = true;
             light.SetActive(true);
         }
+        if (armed && (Time.time>(lastBlink+blink)))
+        {
+            if (light.active)
+                light.SetActive(false);
+            else
+                light.SetActive(true);
+
+            lastBlink = Time.time;
+        }
+
     }
 
     void OnTriggerEnter(Collider coll)
