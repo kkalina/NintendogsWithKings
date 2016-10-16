@@ -101,6 +101,7 @@ MonoBehaviour:
   goal: {x: 0, y: 0, z: 0}
   directionChangeInterval: 2
   activationDistance: 200
+  health: 200
 --- !u!135 &135000011106180184
 SphereCollider:
   m_ObjectHideFlags: 1

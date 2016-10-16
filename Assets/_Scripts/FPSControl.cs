@@ -64,7 +64,7 @@ public class FPSControl : MonoBehaviour {
 			GameOverCanvas.SetActive(true);
 		}
 		if (countdownToWin <= 0) {
-			King.GetComponent<KingNav>().health = 99999999f;
+			King.GetComponent<KingNav>().health = 200f;
 			countdownToWin = 0;
 			VictoryCanvas.SetActive(true);
 		}
