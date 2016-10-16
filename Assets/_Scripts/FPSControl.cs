@@ -58,17 +58,6 @@ public class FPSControl : MonoBehaviour {
 		float mDeltaX = Input.GetAxis("Mouse X");
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
-		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
-
-		camRot.x -= mDeltaY * vertMult;
-		camRot.x = Mathf.Clamp(camRot.x, vertMin, vertMax);
-
-		rot.y += mDeltaX * horizMult;
-
-		transform.localRotation = Quaternion.Euler(rot);
-		camTrans.localRotation = Quaternion.Euler(camRot);
-		countdownToWin -= Time.deltaTime;
-
 		if (King.GetComponent<KingNav>().health <= 0) {
 			mDeltaX = 0;
 			mDeltaY = 0;
@@ -82,6 +71,17 @@ public class FPSControl : MonoBehaviour {
 			countdownToWin = 0;
 			VictoryCanvas.SetActive(true);
 		}
+
+		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
+
+		camRot.x -= mDeltaY * vertMult;
+		camRot.x = Mathf.Clamp(camRot.x, vertMin, vertMax);
+
+		rot.y += mDeltaX * horizMult;
+
+		transform.localRotation = Quaternion.Euler(rot);
+		camTrans.localRotation = Quaternion.Euler(camRot);
+		countdownToWin -= Time.deltaTime;
 	}
 
 	void FixedUpdate() {
