@@ -9,14 +9,12 @@ public class PeasantStabilizer : MonoBehaviour {
 	public float zMax;
 	public float xMin;
 	public float zMin;
-	public float maxSpeed;
 	 
 	private float x;
 	private float z;
 	private float y;
 	private Vector3 destination;
 	private float cooldown;
-	private float rotation;
 	private NavMeshAgent agent;
 
 	// Use this for initialization
@@ -39,10 +37,8 @@ public class PeasantStabilizer : MonoBehaviour {
 
 		// Change direction if haven't changed direction in a while
 		if (cooldown < 0) {
-			x = Random.Range(xMin, xMax);
-			z = Random.Range(zMin, zMax);
-			destination.x = x;
-			destination.z = z;
+			destination.x = Random.Range(xMin, xMax);
+			destination.z = Random.Range(zMin, zMax);
 		    agent.SetDestination(destination);
 		    cooldown = Random.Range(5,20);
 		}
