@@ -4,6 +4,7 @@ using System.Collections;
 public class hammerCollider : MonoBehaviour
 {
     public float peasantHitForce = 100f;
+    public float brickHitForce = 100f;
     public GameObject peasantDead;
     public float awakeTime = 0f;
     public float duration = 0.2f;
@@ -40,6 +41,9 @@ public class hammerCollider : MonoBehaviour
                 deadRigid.AddForce(this.transform.forward * peasantHitForce);
             }
             Destroy(other.gameObject);
+        }else if(other.gameObject.tag == "Brick") {
+            Instantiate(sound);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * brickHitForce);
         }/*else
         {
             Instantiate(sound);  
