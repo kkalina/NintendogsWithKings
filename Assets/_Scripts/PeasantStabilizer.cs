@@ -39,6 +39,7 @@ public class PeasantStabilizer : MonoBehaviour {
                 core.AddForce(Vector3.up * stabilizerForce + -core.transform.forward * 30f);
                 //core.transform.LookAt(target);
             }
+            
 
             //Debug.Log(core.velocity.sqrMagnitude);
         }
