@@ -41,6 +41,7 @@ public class FPSControl : MonoBehaviour {
 		camTrans = transform.Find ("Camera");
 		rigid = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+        VictoryCanvas.SetActive(true);
     }
 	
 	// Update is called once per frame
