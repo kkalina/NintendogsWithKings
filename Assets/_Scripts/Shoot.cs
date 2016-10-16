@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
+
 
 public class Shoot : MonoBehaviour {
     public GameObject bullet;
@@ -13,6 +15,9 @@ public class Shoot : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0)) {
             Instantiate(bullet, fire_point.position + fire_point.forward*1.5f , fire_point.rotation);
+            this.transform.DOShakeScale(.4f, new Vector3(0, 0, 2f), 10, 1, true);
+            this.transform.DOPunchRotation(new Vector3(90f, 10f, 10f), .4f, 1, .1f);
+            this.transform.DOPunchPosition(new Vector3(0f, 0f, -.8f), .4f, 1, 1, false);
         }
 	}
 }
