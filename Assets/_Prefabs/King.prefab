@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   king: {fileID: 4000011917696776}
-  player: {fileID: 0}
+  player: {fileID: 492512, guid: f49f7f7817277df4784d400a649b1df2, type: 2}
   wait_time: 0.5
   follow_time: 4
   max_walk_distance: 50
