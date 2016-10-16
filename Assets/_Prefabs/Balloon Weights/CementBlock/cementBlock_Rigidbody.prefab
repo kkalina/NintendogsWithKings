@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 400006}
@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: -0.00000004371139}
   m_LocalPosition: {x: 0.19562733, y: 0, z: -0.08704064}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.22068721, y: 0, z: 0.087879926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -194,13 +194,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1002 &5400001
 EditorExtensionImpl:
@@ -233,6 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impact: {fileID: 8300000, guid: a88282bd2f6026446996c09a5347f8a9, type: 3}
   dustGO: {fileID: 1000011313028566, guid: f7dd3641dabf8b546be55452ae0d217f, type: 2}
+  outwardForce: {fileID: 1000012695897024, guid: 1b2319620bf4e6b478712c130eca650a,
+    type: 2}
   debrisPrefabs:
   - {fileID: 100000, guid: b0045d8319075ef43a0e9c5413bf3fe4, type: 2}
   - {fileID: 100008, guid: 388f3e24df264804ebc364562a00d494, type: 2}

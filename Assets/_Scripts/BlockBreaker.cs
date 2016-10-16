@@ -59,7 +59,7 @@ public class BlockBreaker : Weight {
 	void OnCollisionEnter(Collision col) {
 		print("COLLISION");
 		//See if the break effect is active, force is large enough, and script has not already run
-		if((enableBreak == true) && (col.relativeVelocity.magnitude > breakForceMinimum) && (_oneShot == true)) {
+		if((enableBreak == true) && (col.relativeVelocity.magnitude > breakForceMinimum) && (_oneShot == true) && col.gameObject.name == "Ground") {
 
 			GetComponent<AudioSource>().Stop();
 
@@ -123,6 +123,7 @@ public class BlockBreaker : Weight {
 				}
 			}
 		}
+		Destroy(gameObject);
 	}
 	
 	/// <summary>
