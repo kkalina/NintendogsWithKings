@@ -22,6 +22,7 @@ public class FPSControl : MonoBehaviour {
 
     public GameObject CameraMount;
     public GameObject MineLauncherIronSight;
+    public GameObject GameOverCanvas;
 
     public int damage = 0;
 
@@ -29,6 +30,7 @@ public class FPSControl : MonoBehaviour {
 	void Start () {
 		camTrans = transform.Find ("Camera");
 		rigid = GetComponent<Rigidbody>();
+		//GameOverCanvas.SetActive(true);
 	}
 	
 	// Update is called once per frame

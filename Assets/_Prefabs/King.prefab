@@ -99,6 +99,7 @@ MonoBehaviour:
   max_walk_distance: 50
   reached_goal: 1
   goal: {x: 0, y: 0, z: 0}
+  health: 200
   directionChangeInterval: 2
   activationDistance: 200
 --- !u!135 &135000011106180184
