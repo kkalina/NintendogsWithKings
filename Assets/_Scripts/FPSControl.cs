@@ -63,6 +63,7 @@ public class FPSControl : MonoBehaviour {
 			//mDeltaY = 0;
 			countdownToWin = 99999999f;
 			GameOverCanvas.SetActive(true);
+            Application.LoadLevel("defeat");
 		}
 		if (countdownToWin <= 0) {
 			mDeltaX = 0;
@@ -70,7 +71,8 @@ public class FPSControl : MonoBehaviour {
 			King.GetComponent<KingNav>().health = 200f;
 			countdownToWin = 0;
 			VictoryCanvas.SetActive(true);
-		}
+            Application.LoadLevel("victory");
+        }
 
 		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
 

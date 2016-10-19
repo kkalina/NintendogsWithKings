@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Karls_Kastle_Test.unity
   - enabled: 1
     path: Assets/_Scenes/tutorial.unity
+  - enabled: 1
+    path: Assets/defeat.unity
+  - enabled: 1
+    path: Assets/victory.unity
