@@ -8,7 +8,7 @@ public class KingNav : MonoBehaviour {
     public float follow_time = 4f;
     public float max_walk_distance = 50f;
     public bool reached_goal = true;
-    private NavMeshAgent agent;
+    private UnityEngine.AI.NavMeshAgent agent;
     public Vector3 goal;
 
     public float directionChangeInterval = 1f;
@@ -19,7 +19,7 @@ public class KingNav : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
       //  StartCoroutine(changeDirection());
       
     }
@@ -60,8 +60,8 @@ public class KingNav : MonoBehaviour {
             //random movement
             Vector3 direction = Random.insideUnitSphere * max_walk_distance;
             direction += transform.position;
-            NavMeshHit hit;
-            NavMesh.SamplePosition(direction, out hit, Random.Range(1f, max_walk_distance), 1);
+            UnityEngine.AI.NavMeshHit hit;
+            UnityEngine.AI.NavMesh.SamplePosition(direction, out hit, Random.Range(1f, max_walk_distance), 1);
 
             Vector3 destination = hit.position;
             agent.SetDestination(destination);

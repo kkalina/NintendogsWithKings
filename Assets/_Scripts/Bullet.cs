@@ -32,9 +32,9 @@ public class Bullet : MonoBehaviour {
         //other.GetComponent<Rigidbody>().AddExplosionForce(50f, transform.position, 10f);
         if(other.rigidbody != null)
         {
-            //other.rigidbody.AddRelativeForce(new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 
+            //other.rigidbody.AddRelativeForce(new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f),
             //    Random.Range(-100f, 100f)), ForceMode.Impulse);
-            
+
         }
         if (other.gameObject.tag == "Wall")
         {
@@ -66,18 +66,20 @@ public class Bullet : MonoBehaviour {
 
             if (!other.gameObject.GetComponent<peasantController>().Assassin)
             {
-                GameObject PKMI = Instantiate(peasantKillMessage);
-                PKMI.transform.position = messageAnchor.transform.position;
-                PKMI.transform.rotation = messageAnchor.transform.rotation;
-                PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                //GameObject PKMI = Instantiate(peasantKillMessage);
+                //PKMI.transform.position = messageAnchor.transform.position;
+                //PKMI.transform.rotation = messageAnchor.transform.rotation;
+                //PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                messageAnchor.GetComponent<messageCenter>().createMessage("Peasant killed.");
                 playerObj.GetComponent<FPSControl>().damage += 500;
             }
             else
             {
-                GameObject AKMI = Instantiate(assassinKillMessage);
-                AKMI.transform.position = messageAnchor.transform.position;
-                AKMI.transform.rotation = messageAnchor.transform.rotation;
-                AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                //GameObject AKMI = Instantiate(assassinKillMessage);
+                //AKMI.transform.position = messageAnchor.transform.position;
+                //AKMI.transform.rotation = messageAnchor.transform.rotation;
+                //AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                messageAnchor.GetComponent<messageCenter>().createMessage("Assassin killed.");
                 playerObj.GetComponent<FPSControl>().damage -= 500;
             }
 
@@ -97,5 +99,5 @@ public class Bullet : MonoBehaviour {
             other.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward * kingHitForce);
         }
     }
-	
+
 }

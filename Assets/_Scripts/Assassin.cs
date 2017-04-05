@@ -8,7 +8,7 @@ public class Assassin : MonoBehaviour {
     public GameObject player;
 
     private Vector3 goal;
-    private NavMeshAgent agent;
+    private UnityEngine.AI.NavMeshAgent agent;
 
     private bool attack_player = false;
 
@@ -22,7 +22,7 @@ public class Assassin : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         float rand = Random.Range(1, 84);
         if(rand % 42 == 0) {
             attack_player = true;

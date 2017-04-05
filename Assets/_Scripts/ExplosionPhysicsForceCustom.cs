@@ -47,7 +47,7 @@ namespace UnitySampleAssets.Effects
                     deadPeasantInst.transform.rotation = col.gameObject.transform.rotation;
                     //Rigidbody rigidPeasant = deadPeasantInst.GetComponent<Rigidbody>();
                     Rigidbody[] deadPeasantRigidbodies;
-                    deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>(); 
+                    deadPeasantRigidbodies = deadPeasantInst.GetComponentsInChildren<Rigidbody>();
                     foreach (Rigidbody deadRigid in deadPeasantRigidbodies)
                     {
                         if ((deadRigid != null)&&(!rigidbodies.Contains(deadRigid)))
@@ -55,18 +55,20 @@ namespace UnitySampleAssets.Effects
                     }
                     if (!col.gameObject.GetComponent<peasantController>().Assassin)
                     {
-                        GameObject PKMI = Instantiate(peasantKillMessage);
-                        PKMI.transform.position = messageAnchor.transform.position;
-                        PKMI.transform.rotation = messageAnchor.transform.rotation;
-                        PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        //GameObject PKMI = Instantiate(peasantKillMessage);
+                        //PKMI.transform.position = messageAnchor.transform.position;
+                        //PKMI.transform.rotation = messageAnchor.transform.rotation;
+                        //PKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        messageAnchor.GetComponent<messageCenter>().createMessage("Peasant killed.");
                         playerObj.GetComponent<FPSControl>().damage += 500;
                     }
                     else
                     {
-                        GameObject AKMI = Instantiate(assassinKillMessage);
-                        AKMI.transform.position = messageAnchor.transform.position;
-                        AKMI.transform.rotation = messageAnchor.transform.rotation;
-                        AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        //GameObject AKMI = Instantiate(assassinKillMessage);
+                        //AKMI.transform.position = messageAnchor.transform.position;
+                        //AKMI.transform.rotation = messageAnchor.transform.rotation;
+                        //AKMI.transform.SetParent(messageAnchor.gameObject.transform);
+                        messageAnchor.GetComponent<messageCenter>().createMessage("Assassin killed.");
                         playerObj.GetComponent<FPSControl>().damage -= 500;
                     }
                     Destroy(col.gameObject);

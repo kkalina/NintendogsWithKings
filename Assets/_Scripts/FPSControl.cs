@@ -16,7 +16,7 @@ public class FPSControl : MonoBehaviour {
 	public float	vertMult=0.5f, vertMin=-30, vertMax=30;
 	public float	horizMult=0.5f;
 	public float	speed = 10;
-	
+
 	public Vector3 	rot;
 	public Vector3 	camRot;
 	Rigidbody 		rigid;
@@ -30,6 +30,9 @@ public class FPSControl : MonoBehaviour {
 
     public int damage = 0;
 
+    public string defeatLevelName;
+    public string victoryLevelName;
+
     void Awake()
     {
         King = GameObject.Find("King");
@@ -42,7 +45,7 @@ public class FPSControl : MonoBehaviour {
 		rigid = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -54,7 +57,7 @@ public class FPSControl : MonoBehaviour {
         rot = transform.localRotation.eulerAngles;
 		camRot = camTrans.localRotation.eulerAngles;
 		if (camRot.x > 180) camRot.x -= 360;
-		
+
 		float mDeltaX = Input.GetAxis("Mouse X");
 		float mDeltaY = Input.GetAxis("Mouse Y");
 
@@ -62,17 +65,17 @@ public class FPSControl : MonoBehaviour {
 			//mDeltaX = 0;
 			//mDeltaY = 0;
 			countdownToWin = 99999999f;
-			GameOverCanvas.SetActive(true);
-            Application.LoadLevel("defeat");
+			//GameOverCanvas.SetActive(true);
+      Application.LoadLevel(defeatLevelName);
 		}
 		if (countdownToWin <= 0) {
 			mDeltaX = 0;
 			mDeltaY = 0;
 			King.GetComponent<KingNav>().health = 200f;
 			countdownToWin = 0;
-			VictoryCanvas.SetActive(true);
-            Application.LoadLevel("victory");
-        }
+			//VictoryCanvas.SetActive(true);
+      Application.LoadLevel(victoryLevelName);
+    }
 
 		//print ("mX:"+mDeltaX+"    mY:"+mDeltaY);
 
